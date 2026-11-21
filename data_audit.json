@@ -1,0 +1,454 @@
+{
+  "source_file": "twcs.csv",
+  "source_bytes": 516508641,
+  "source_sha256": "cd297fcfa1bf6f99938be242e8e578980bc6d1b96adc8691abec9a39175b03c0",
+  "columns": [
+    "tweet_id",
+    "author_id",
+    "inbound",
+    "created_at",
+    "text",
+    "response_tweet_id",
+    "in_response_to_tweet_id"
+  ],
+  "counts": {
+    "duplicate_tweet_ids": 0,
+    "tweets": 2811774,
+    "outbound": 1273931,
+    "inbound": 1537843,
+    "inbound_without_listed_response": 234014,
+    "tweets_with_multiple_listed_responses": 222426,
+    "root_customer_tweets": 787346,
+    "sample_ids_found_in_full": 85,
+    "sample_text_mismatches": 85
+  },
+  "support_accounts": 108,
+  "top_support_accounts": [
+    [
+      "AmazonHelp",
+      169840
+    ],
+    [
+      "AppleSupport",
+      106860
+    ],
+    [
+      "Uber_Support",
+      56270
+    ],
+    [
+      "SpotifyCares",
+      43265
+    ],
+    [
+      "Delta",
+      42253
+    ],
+    [
+      "Tesco",
+      38573
+    ],
+    [
+      "AmericanAir",
+      36764
+    ],
+    [
+      "TMobileHelp",
+      34317
+    ],
+    [
+      "comcastcares",
+      33031
+    ],
+    [
+      "British_Airways",
+      29361
+    ],
+    [
+      "SouthwestAir",
+      28977
+    ],
+    [
+      "VirginTrains",
+      27817
+    ],
+    [
+      "Ask_Spectrum",
+      25860
+    ],
+    [
+      "XboxSupport",
+      24557
+    ],
+    [
+      "sprintcare",
+      22381
+    ],
+    [
+      "hulu_support",
+      21872
+    ],
+    [
+      "sainsburys",
+      19466
+    ],
+    [
+      "GWRHelp",
+      19364
+    ],
+    [
+      "AskPlayStation",
+      19098
+    ],
+    [
+      "ChipotleTweets",
+      18749
+    ]
+  ],
+  "sample_rows": 93,
+  "sample_overlap": 85,
+  "selected_brands": [
+    "AmazonHelp",
+    "AppleSupport",
+    "Uber_Support",
+    "SpotifyCares",
+    "Delta"
+  ],
+  "confirmed_first_reply_pairs_by_brand": {
+    "Delta": 24603,
+    "SpotifyCares": 26068,
+    "AmazonHelp": 76799,
+    "Uber_Support": 39355,
+    "AppleSupport": 74613
+  },
+  "observed_conversation_components": 798012,
+  "components_by_observed_tweet_count": {
+    "10": 6442,
+    "8": 14147,
+    "2": 435270,
+    "9": 8562,
+    "4": 104816,
+    "5": 43392,
+    "94": 7,
+    "6": 34679,
+    "3": 111969,
+    "7": 18435,
+    "12": 3215,
+    "18": 693,
+    "50": 21,
+    "291": 1,
+    "11": 4370,
+    "33": 89,
+    "114": 2,
+    "253": 1,
+    "34": 61,
+    "20": 453,
+    "14": 1791,
+    "13": 2357,
+    "64": 10,
+    "154": 3,
+    "30": 106,
+    "15": 1287,
+    "28": 126,
+    "16": 1153,
+    "26": 180,
+    "113": 5,
+    "147": 1,
+    "51": 22,
+    "21": 383,
+    "22": 347,
+    "29": 117,
+    "227": 2,
+    "37": 50,
+    "70": 7,
+    "19": 552,
+    "62": 9,
+    "17": 859,
+    "448": 2,
+    "802": 1,
+    "142": 2,
+    "214": 1,
+    "111": 4,
+    "471": 1,
+    "159": 1,
+    "49": 20,
+    "173": 1,
+    "125": 5,
+    "31": 84,
+    "100": 5,
+    "118": 2,
+    "170": 2,
+    "27": 141,
+    "110": 10,
+    "38": 53,
+    "112": 5,
+    "124": 3,
+    "25": 206,
+    "24": 238,
+    "32": 82,
+    "52": 12,
+    "359": 1,
+    "59": 7,
+    "36": 57,
+    "218": 1,
+    "123": 3,
+    "385": 2,
+    "172": 2,
+    "80": 3,
+    "119": 4,
+    "53": 17,
+    "176": 2,
+    "175": 3,
+    "168": 1,
+    "46": 28,
+    "48": 26,
+    "41": 52,
+    "136": 1,
+    "143": 2,
+    "23": 269,
+    "89": 6,
+    "39": 36,
+    "116": 3,
+    "43": 31,
+    "65": 16,
+    "35": 64,
+    "103": 4,
+    "71": 7,
+    "243": 1,
+    "122": 2,
+    "45": 27,
+    "40": 37,
+    "974": 1,
+    "76": 4,
+    "131": 1,
+    "101": 2,
+    "135": 2,
+    "109": 2,
+    "204": 2,
+    "346": 1,
+    "97": 4,
+    "54": 8,
+    "99": 1,
+    "651": 1,
+    "81": 8,
+    "74": 11,
+    "194": 1,
+    "67": 11,
+    "145": 1,
+    "139": 2,
+    "61": 16,
+    "91": 7,
+    "66": 12,
+    "95": 1,
+    "93": 2,
+    "149": 2,
+    "98": 7,
+    "47": 13,
+    "42": 27,
+    "222": 1,
+    "402": 1,
+    "392": 1,
+    "285": 2,
+    "60": 15,
+    "661": 1,
+    "245": 2,
+    "44": 31,
+    "308": 1,
+    "140": 1,
+    "75": 7,
+    "78": 5,
+    "58": 11,
+    "63": 12,
+    "261": 1,
+    "128": 3,
+    "96": 1,
+    "86": 6,
+    "56": 10,
+    "87": 5,
+    "153": 3,
+    "133": 1,
+    "92": 5,
+    "102": 4,
+    "73": 3,
+    "138": 1,
+    "209": 2,
+    "107": 2,
+    "68": 8,
+    "354": 1,
+    "117": 1,
+    "79": 3,
+    "115": 2,
+    "72": 5,
+    "127": 1,
+    "106": 2,
+    "57": 10,
+    "191": 1,
+    "287": 1,
+    "108": 2,
+    "84": 6,
+    "551": 1,
+    "155": 1,
+    "229": 2,
+    "120": 2,
+    "357": 1,
+    "197": 1,
+    "90": 3,
+    "55": 10,
+    "185": 1,
+    "217": 1,
+    "213": 1,
+    "244": 1,
+    "156": 1,
+    "425": 1,
+    "203": 2,
+    "232": 1,
+    "310": 1,
+    "83": 5,
+    "77": 5,
+    "85": 3,
+    "82": 8,
+    "144": 1,
+    "236": 1,
+    "69": 7,
+    "282": 1,
+    "584": 1,
+    "150": 2,
+    "200": 1,
+    "193": 3,
+    "1390": 1,
+    "141": 1,
+    "456": 1,
+    "235": 1,
+    "196": 1,
+    "187": 1,
+    "88": 1,
+    "104": 1,
+    "166": 1,
+    "1060": 1,
+    "179": 1,
+    "129": 1,
+    "207": 1,
+    "206": 1,
+    "348": 1,
+    "130": 1,
+    "161": 1,
+    "160": 1,
+    "201": 1,
+    "121": 1,
+    "275": 1,
+    "134": 1,
+    "534": 1,
+    "650": 1
+  },
+  "language_and_dedup_exclusions_in_sampled_pool": {
+    "short_or_empty_customer_text": 2251,
+    "non_english_customer": 4858,
+    "non_english_reply": 422,
+    "duplicate_normalized_query": 207
+  },
+  "language_filter_limitations": "Automatic detection on short tweets is imperfect. This is a filtered sampled pool, not an exhaustive language audit.",
+  "split_method": "Rebalanced deterministic hash sample of connected groups from the prepared 50,300-pair pool, with exact per-brand quotas. Test/development groups contain one selected pair; their source conversations can contain multiple tweets.",
+  "split_counts": {
+    "test": 200,
+    "development": 100,
+    "index": 50000
+  },
+  "split_brand_counts": {
+    "test": {
+      "AmazonHelp": 40,
+      "AppleSupport": 40,
+      "Delta": 40,
+      "SpotifyCares": 40,
+      "Uber_Support": 40
+    },
+    "development": {
+      "AmazonHelp": 20,
+      "AppleSupport": 20,
+      "Delta": 20,
+      "SpotifyCares": 20,
+      "Uber_Support": 20
+    },
+    "index": {
+      "AmazonHelp": 10000,
+      "AppleSupport": 10000,
+      "Delta": 10000,
+      "SpotifyCares": 10000,
+      "Uber_Support": 10000
+    }
+  },
+  "split_time_ranges": {
+    "test": {
+      "start": "2017-10-02T19:09:46+00:00",
+      "end": "2017-11-28T10:50:53+00:00"
+    },
+    "development": {
+      "start": "2017-10-04T14:10:16+00:00",
+      "end": "2017-11-27T20:46:40+00:00"
+    },
+    "index": {
+      "start": "2012-11-27T11:32:15+00:00",
+      "end": "2017-11-28T21:06:17+00:00"
+    }
+  },
+  "split_checks": {
+    "conversation_overlap": 0,
+    "normalized_query_overlap": 0,
+    "near_duplicate_semantic_check": {
+      "status": "completed approximate audit",
+      "threshold": 0.95,
+      "flagged": 0,
+      "n": 200,
+      "report": "reports/semantic_similarity_audit.json"
+    }
+  },
+  "policy_data": "TWCS contains historical responses. Brand-approved policies, account facts, VIP status and resolution outcomes are not provided.",
+  "evaluation_status": "Earlier workflow: 200 held-out cases across three live systems. Current workflow: 27 automated tests and five-brand real retrieval verification with rule-based components. Updated live comparison and human labels pending.",
+  "elapsed_seconds": 217.5,
+  "initial_split_method": "Deterministic SHA256 assignment of connected components, exact normalized-query deduplication, then per-brand caps.",
+  "sample_compatibility": {
+    "sample_rows": 93,
+    "matching_text_rows": 34,
+    "matching_text_and_same_id": 0,
+    "id_examples": [
+      {
+        "id": "119237",
+        "same_author": false,
+        "same_text": false
+      },
+      {
+        "id": "119239",
+        "same_author": false,
+        "same_text": false
+      },
+      {
+        "id": "119238",
+        "same_author": false,
+        "same_text": false
+      }
+    ],
+    "text_id_examples": [
+      {
+        "sample_id": "119285",
+        "full_id": "330238"
+      },
+      {
+        "sample_id": "119287",
+        "full_id": "330241"
+      },
+      {
+        "sample_id": "119282",
+        "full_id": "330239"
+      },
+      {
+        "sample_id": "119283",
+        "full_id": "330244"
+      },
+      {
+        "sample_id": "119324",
+        "full_id": "716608"
+      }
+    ]
+  },
+  "sample_handling": "Full twcs.csv is authoritative. Sample IDs are incompatible. Do not join the two attachments by ID or use sample.csv as an independent holdout.",
+  "date_handling": "Data were collected around 2017, but retained conversation roots can be older. Use actual timestamps rather than assuming every tweet was written in 2017."
+}
