@@ -54,7 +54,12 @@ class Retriever:
         if self.cases.count() != len(rows) and vector_path.exists():
             import numpy as np
             with np.load(vector_path,allow_pickle=False) as archive:
-                if (str(archive['corpus_sha256']) != digest or
+                # Git can convert record separators between CRLF and LF.
+                # Accept either encoding of the exact same JSONL content.
+                lf_corpus = corpus.read_bytes().replace(b'\r\n',b'\n')
+                corpus_digests = {digest,hashlib.sha256(lf_corpus).hexdigest(),
+                                  hashlib.sha256(lf_corpus.replace(b'\n',b'\r\n')).hexdigest()}
+                if (str(archive['corpus_sha256']) not in corpus_digests or
                     str(archive['model']) != MODEL_ID or str(archive['revision']) != MODEL_REVISION or
                     archive['ids'].tolist() != [r['case_id'] for r in rows]):
                     raise ValueError('Precomputed embeddings do not match the frozen corpus/model.')
