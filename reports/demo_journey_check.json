@@ -1,0 +1,13 @@
+{
+  "mode": "test-only rule-based provider with real UI and real Chroma retrieval; no live LLM calls",
+  "routine_reply": "passed",
+  "five_same_brand_cases": "passed",
+  "confidence_display": "passed",
+  "vip_escalation": "passed",
+  "human_approval_persisted": "passed",
+  "simulated_outbox": "passed",
+  "safety_tests_passed": 5,
+  "clear_key": "passed",
+  "ui_exceptions": 0,
+  "live_model_validation": "pending real session key"
+}

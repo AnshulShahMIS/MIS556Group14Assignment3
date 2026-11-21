@@ -1,0 +1,71 @@
+SUPPORT COPILOT HUMAN LABELING STUDY
+
+Purpose
+Measure intent and urgency accuracy plus escalation precision, recall and F1
+against independent human judgments. Do not treat model outputs or historical
+brand replies as ground truth.
+
+Assignments
+Rater A: rater_A_assignment.json, 60 tweets.
+Rater B: rater_B_assignment.json, 60 tweets.
+Both assignments include the same 20 tweets, four per brand. Together they
+cover 100 unique tweets, 20 per brand. Both raters work independently before
+discussing the shared cases. Do not copy the other rater's labels.
+
+How to label
+1. Open the app's Evaluation lab and expand the human-labeling section.
+2. Upload your assignment JSON and select Load label file.
+3. Enter intent, urgency, needs_human, a short escalation reason, and a rater
+   identifier in annotator. Use Rater A or Rater B if you prefer anonymity.
+4. Save and Export human labels. Save the downloaded JSON outside the browser.
+   Reloading or closing the session loses access to its workspace in the UI.
+5. Compare both completed files with tools/compare_human_labels.py.
+6. Discuss disagreements only after independent work. Record a consensus label
+   and the reason for changing it in the consensus draft. Never erase raw files.
+
+Intent rubric: select the primary help requested
+refund: refunds, duplicate charges, billing or payment disputes.
+delay: late/missing packages, flight delays, missing/delayed baggage.
+account: login, passwords, profile/access problems, suspected account compromise.
+bug: an app or service feature fails, crashes or behaves incorrectly.
+praise: a compliment with no primary request for help.
+other: remaining topics, spam/off-topic, or an issue that fits no category.
+If there are multiple issues, label the main requested action and explain any
+ambiguity. Do not create new categories halfway through the study.
+
+Urgency rubric
+high: immediate safety/security risk, active compromise, or an explicit
+      time-critical deadline requiring prompt attention.
+med: a current unresolved service problem with no evidence of immediate danger.
+low: general information, praise, or non-time-sensitive feedback.
+Negative wording or anger alone does not establish high urgency.
+
+Human-review rubric
+true: legal/safety/account-compromise risk, an actual private-account decision,
+      or insufficient policy evidence to handle the issue safely.
+false: applicable public FAQ steps, a safe clarification, routine praise, or
+       clearly irrelevant spam that can be ignored without a reply.
+Use policy_reference.json for the same limited current-policy context as the
+app. Do not assume a refund entitlement, account facts, or VIP status. TWCS does
+not provide verified VIP metadata. A customer's claim alone does not establish
+VIP status. Assess the need for a human, not whether you like the wording.
+
+Adjudication and reporting
+Report overlap size, paired completed labels, raw agreement and Cohen's kappa
+for each field. Kappa is undefined when expected agreement is 1. Missing labels
+must stay missing; do not convert them into incorrect predictions or zero
+accuracy. Use the adjudicated 100-case file for final triage metrics. Keep the
+frozen system unchanged during test annotation. If you change the system,
+record a new version and a new evaluation rather than selecting favorable
+test cases.
+
+Reply-quality validation
+After the updated benchmark, sample replies across all five brands. At least
+two raters should score a shared subset without seeing system names or model
+judge scores. Score helpfulness, factual support and tone from 1 to 5 using the
+customer issue and official policy notes. The historical brand reply is only
+one observed answer. Keep response quality separate from triage labels.
+
+Status
+These files contain NO human ground-truth labels. The system's rule-based
+functional tests and model-judged benchmark are different forms of evidence.

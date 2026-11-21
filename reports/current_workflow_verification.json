@@ -1,0 +1,2403 @@
+{
+  "mode": "offline_demo components with real vector retrieval; not live LLM validation",
+  "summary": {
+    "brands": 5,
+    "same_brand_top_five": "passed",
+    "policy_check": "passed",
+    "vip_routing": "passed",
+    "critic_revision": "passed",
+    "confidence_and_outbox": "passed"
+  },
+  "routine_cases": [
+    {
+      "run_id": "5ec258718d6d478eaabb7bbd5989ef6b",
+      "brand": "AmazonHelp",
+      "customer_text": "My package is late.",
+      "policy_context": "current_simulation",
+      "mode": "full_agent",
+      "cases": [
+        {
+          "case_id": "twcs-1574950-1574949",
+          "customer_text": "[USER] where are my packages? You are late on your delivery YET AGAIN!! I have ordered 15 times and 12 of them are #delayed! WHAT EVEN!!",
+          "created_at": "2017-11-04T14:46:11+00:00",
+          "historical_reply": "[USER] I'm so sorry that we didn't get you order to you in time, Jason! Can you tell me the status &amp; carrier? [URL] ^FR",
+          "doc_type": "historical_case",
+          "conversation_id": "component-1574949",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "brand": "AmazonHelp",
+          "similarity": 0.6822
+        },
+        {
+          "case_id": "twcs-897601-897599",
+          "customer_text": "[USER] can you tell me why my package is delayed??? I needed it like yesterday...",
+          "conversation_id": "component-897599",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "created_at": "2017-10-21T02:56:40+00:00",
+          "brand": "AmazonHelp",
+          "historical_reply": "[USER] Just to confirm, did we miss the delivery date in the confirmation e-mail? You can check here: [URL] ^BH",
+          "doc_type": "historical_case",
+          "similarity": 0.6727
+        },
+        {
+          "case_id": "twcs-218983-218981",
+          "customer_text": "Ok [USER] my package was supposed to arrive today at 8pm it\u2019s almost 10 and still nothing, what can I do?",
+          "doc_type": "historical_case",
+          "historical_reply": "[USER] I'm sorry for the delay. Orders like this typically arrive by next business day. Let us know if it doesn't show up by tomorrow. ^CL",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "conversation_id": "component-218981",
+          "created_at": "2017-10-05T01:56:48+00:00",
+          "brand": "AmazonHelp",
+          "similarity": 0.6638
+        },
+        {
+          "case_id": "twcs-1597256-1597255",
+          "customer_text": "[USER] Ordered a package desperately needed and it was due to arrive yesterday and is now 'running late'. Any idea of a delivery date??",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "conversation_id": "component-1597253",
+          "created_at": "2017-11-04T22:13:52+00:00",
+          "brand": "AmazonHelp",
+          "historical_reply": "[USER] I'm sorry to hear your order is late! Please check here for an updated delivery date: [URL] ^BV",
+          "doc_type": "historical_case",
+          "similarity": 0.6554
+        },
+        {
+          "case_id": "twcs-924450-924448",
+          "customer_text": "Hey [USER] not only is my PRIME package late, but I can\u2019t even find out where my package is bc it shipped your delivery service.....",
+          "historical_reply": "[USER] Sorry for the troubles! My team would like to look into this. Please send us information here: [URL] ^AB",
+          "created_at": "2017-10-21T13:49:08+00:00",
+          "conversation_id": "component-924448",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "doc_type": "historical_case",
+          "brand": "AmazonHelp",
+          "similarity": 0.6525
+        }
+      ],
+      "policies": [
+        {
+          "policy_id": "amazon-missing",
+          "text": "For a package marked delivered but missing, check the address in Your Orders, delivery notices or photos, the delivery area, and whether someone accepted it. The source advises allowing 48 hours because scanning can precede arrival. If unresolved, the next contact depends on whether Amazon or a third-party seller shipped the order. No refund or arrival can be guaranteed from a tweet.",
+          "doc_type": "policy",
+          "review_status": "source_verified",
+          "source_url": "https://digprjsurvey.amazon.com/csad/help/node/GCU8BWGTQNJKQEBS?theme=light",
+          "topic": "Package delivered but missing",
+          "demo_reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+          "source_type": "official_current",
+          "effective_from": "unknown",
+          "brand": "AmazonHelp",
+          "retrieved_at": "2026-11-20",
+          "similarity": 0.5009
+        },
+        {
+          "policy_id": "amazon-late",
+          "doc_type": "policy",
+          "source_url": "https://digprjsurvey.amazon.com/csad/help/node/GL669SSDXFCJ2ZA6?theme=light",
+          "review_status": "source_verified",
+          "retrieved_at": "2026-11-20",
+          "text": "For a late Amazon delivery, check tracking and carrier notifications. The page advises allowing 48 hours beyond the estimated date for unexpected delays. For an unresolved Amazon-shipped order, contact Customer Service within 30 days of the estimate. For an order shipped and sold by a third-party seller, contact that seller. This page does not establish an individual order's status.",
+          "topic": "Late delivery and tracking",
+          "source_type": "official_current",
+          "demo_reply": "I'm sorry for the delay. Please check tracking in Your Orders and any carrier notifications. If it's still unresolved after 48 hours past the estimate, contact Customer Service for an Amazon-shipped order.",
+          "brand": "AmazonHelp",
+          "effective_from": "unknown",
+          "similarity": 0.485
+        },
+        {
+          "policy_id": "amazon-security",
+          "doc_type": "policy",
+          "review_status": "source_verified",
+          "effective_from": "unknown",
+          "demo_reply": "Please check your account by opening the Amazon app or website directly. Avoid links in unexpected messages, and keep passwords and verification codes private. Contact official Customer Service for help.",
+          "retrieved_at": "2026-11-20",
+          "source_url": "https://digprjsurvey.amazon.com/csad/help/node/TapjnwRvIRtlgyLPSl",
+          "topic": "Suspicious messages and account security",
+          "brand": "AmazonHelp",
+          "text": "Verify unexpected order communications by signing in directly to the Amazon website or app and checking order history or Message Center. Use official support channels. Amazon warns against disclosing passwords or sensitive information through unsolicited calls or external sites. A suspected compromise requires human review rather than copying a historical reply.",
+          "source_type": "official_current",
+          "similarity": 0.1855
+        }
+      ],
+      "policy_searched": true,
+      "cases_searched": true,
+      "searches": 2,
+      "research_done": true,
+      "draft_history": [
+        {
+          "reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+          "policy_ids": [
+            "amazon-missing"
+          ],
+          "case_ids": [
+            "twcs-1574950-1574949"
+          ],
+          "uncertainty": "Rule-based demonstration output"
+        }
+      ],
+      "critic_history": [
+        {
+          "passed": true,
+          "issues": [],
+          "supported": true,
+          "needs_human": false,
+          "reason": "Deterministic demonstration check"
+        }
+      ],
+      "rewrite_count": 0,
+      "trace": [
+        {
+          "stage": "triage",
+          "summary": "Rule-based demonstration classification",
+          "result": {
+            "intent": "delay",
+            "sentiment": -0.5,
+            "urgency": "med",
+            "risk_flags": [],
+            "needs_human": false,
+            "off_topic": false,
+            "spam": false,
+            "reason": "Rule-based demonstration classification",
+            "brand": "AmazonHelp",
+            "vip": false
+          }
+        },
+        {
+          "stage": "router",
+          "summary": "Support issue: retrieve cases and check policy.",
+          "decision": "research"
+        },
+        {
+          "stage": "retrieval",
+          "summary": "Retrieved 5 same-brand cases.",
+          "tool": "search_cases",
+          "query": "My package is late.",
+          "results": [
+            {
+              "case_id": "twcs-1574950-1574949",
+              "customer_text": "[USER] where are my packages? You are late on your delivery YET AGAIN!! I have ordered 15 times and 12 of them are #delayed! WHAT EVEN!!",
+              "created_at": "2017-11-04T14:46:11+00:00",
+              "historical_reply": "[USER] I'm so sorry that we didn't get you order to you in time, Jason! Can you tell me the status &amp; carrier? [URL] ^FR",
+              "doc_type": "historical_case",
+              "conversation_id": "component-1574949",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "brand": "AmazonHelp",
+              "similarity": 0.6822
+            },
+            {
+              "case_id": "twcs-897601-897599",
+              "customer_text": "[USER] can you tell me why my package is delayed??? I needed it like yesterday...",
+              "conversation_id": "component-897599",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "created_at": "2017-10-21T02:56:40+00:00",
+              "brand": "AmazonHelp",
+              "historical_reply": "[USER] Just to confirm, did we miss the delivery date in the confirmation e-mail? You can check here: [URL] ^BH",
+              "doc_type": "historical_case",
+              "similarity": 0.6727
+            },
+            {
+              "case_id": "twcs-218983-218981",
+              "customer_text": "Ok [USER] my package was supposed to arrive today at 8pm it\u2019s almost 10 and still nothing, what can I do?",
+              "doc_type": "historical_case",
+              "historical_reply": "[USER] I'm sorry for the delay. Orders like this typically arrive by next business day. Let us know if it doesn't show up by tomorrow. ^CL",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "conversation_id": "component-218981",
+              "created_at": "2017-10-05T01:56:48+00:00",
+              "brand": "AmazonHelp",
+              "similarity": 0.6638
+            },
+            {
+              "case_id": "twcs-1597256-1597255",
+              "customer_text": "[USER] Ordered a package desperately needed and it was due to arrive yesterday and is now 'running late'. Any idea of a delivery date??",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "conversation_id": "component-1597253",
+              "created_at": "2017-11-04T22:13:52+00:00",
+              "brand": "AmazonHelp",
+              "historical_reply": "[USER] I'm sorry to hear your order is late! Please check here for an updated delivery date: [URL] ^BV",
+              "doc_type": "historical_case",
+              "similarity": 0.6554
+            },
+            {
+              "case_id": "twcs-924450-924448",
+              "customer_text": "Hey [USER] not only is my PRIME package late, but I can\u2019t even find out where my package is bc it shipped your delivery service.....",
+              "historical_reply": "[USER] Sorry for the troubles! My team would like to look into this. Please send us information here: [URL] ^AB",
+              "created_at": "2017-10-21T13:49:08+00:00",
+              "conversation_id": "component-924448",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "doc_type": "historical_case",
+              "brand": "AmazonHelp",
+              "similarity": 0.6525
+            }
+          ]
+        },
+        {
+          "stage": "policy",
+          "summary": "Retrieved 3 source-verified policy notes.",
+          "tool": "search_policy",
+          "query": "My package is late.",
+          "results": [
+            {
+              "policy_id": "amazon-missing",
+              "text": "For a package marked delivered but missing, check the address in Your Orders, delivery notices or photos, the delivery area, and whether someone accepted it. The source advises allowing 48 hours because scanning can precede arrival. If unresolved, the next contact depends on whether Amazon or a third-party seller shipped the order. No refund or arrival can be guaranteed from a tweet.",
+              "doc_type": "policy",
+              "review_status": "source_verified",
+              "source_url": "https://digprjsurvey.amazon.com/csad/help/node/GCU8BWGTQNJKQEBS?theme=light",
+              "topic": "Package delivered but missing",
+              "demo_reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+              "source_type": "official_current",
+              "effective_from": "unknown",
+              "brand": "AmazonHelp",
+              "retrieved_at": "2026-11-20",
+              "similarity": 0.5009
+            },
+            {
+              "policy_id": "amazon-late",
+              "doc_type": "policy",
+              "source_url": "https://digprjsurvey.amazon.com/csad/help/node/GL669SSDXFCJ2ZA6?theme=light",
+              "review_status": "source_verified",
+              "retrieved_at": "2026-11-20",
+              "text": "For a late Amazon delivery, check tracking and carrier notifications. The page advises allowing 48 hours beyond the estimated date for unexpected delays. For an unresolved Amazon-shipped order, contact Customer Service within 30 days of the estimate. For an order shipped and sold by a third-party seller, contact that seller. This page does not establish an individual order's status.",
+              "topic": "Late delivery and tracking",
+              "source_type": "official_current",
+              "demo_reply": "I'm sorry for the delay. Please check tracking in Your Orders and any carrier notifications. If it's still unresolved after 48 hours past the estimate, contact Customer Service for an Amazon-shipped order.",
+              "brand": "AmazonHelp",
+              "effective_from": "unknown",
+              "similarity": 0.485
+            },
+            {
+              "policy_id": "amazon-security",
+              "doc_type": "policy",
+              "review_status": "source_verified",
+              "effective_from": "unknown",
+              "demo_reply": "Please check your account by opening the Amazon app or website directly. Avoid links in unexpected messages, and keep passwords and verification codes private. Contact official Customer Service for help.",
+              "retrieved_at": "2026-11-20",
+              "source_url": "https://digprjsurvey.amazon.com/csad/help/node/TapjnwRvIRtlgyLPSl",
+              "topic": "Suspicious messages and account security",
+              "brand": "AmazonHelp",
+              "text": "Verify unexpected order communications by signing in directly to the Amazon website or app and checking order history or Message Center. Use official support channels. Amazon warns against disclosing passwords or sensitive information through unsolicited calls or external sites. A suspected compromise requires human review rather than copying a historical reply.",
+              "source_type": "official_current",
+              "similarity": 0.1855
+            }
+          ]
+        },
+        {
+          "stage": "research",
+          "summary": "Demonstration evidence collection complete",
+          "tool": "finish_research"
+        },
+        {
+          "stage": "policy_check",
+          "summary": "Rule-based demonstration policy applicability check",
+          "result": {
+            "relevant_policy_ids": [
+              "amazon-missing",
+              "amazon-late",
+              "amazon-security"
+            ],
+            "evidence_sufficient": true,
+            "requires_human": false,
+            "reason": "Rule-based demonstration policy applicability check"
+          }
+        },
+        {
+          "stage": "draft",
+          "summary": "Prepared a reply draft.",
+          "draft": {
+            "reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+            "policy_ids": [
+              "amazon-missing"
+            ],
+            "case_ids": [
+              "twcs-1574950-1574949"
+            ],
+            "uncertainty": "Rule-based demonstration output"
+          },
+          "controlled_test": false
+        },
+        {
+          "stage": "critic",
+          "summary": "Deterministic demonstration check",
+          "result": {
+            "passed": true,
+            "issues": [],
+            "supported": true,
+            "needs_human": false,
+            "reason": "Deterministic demonstration check"
+          }
+        },
+        {
+          "stage": "finalize",
+          "summary": "Auto-send simulated in the local outbox."
+        }
+      ],
+      "inject_bad_draft": false,
+      "customer_vip": false,
+      "auto_send": true,
+      "confidence_threshold": 80,
+      "triage": {
+        "intent": "delay",
+        "sentiment": -0.5,
+        "urgency": "med",
+        "risk_flags": [],
+        "needs_human": false,
+        "off_topic": false,
+        "spam": false,
+        "reason": "Rule-based demonstration classification",
+        "brand": "AmazonHelp",
+        "vip": false
+      },
+      "route_decision": "research",
+      "policy_assessment": {
+        "relevant_policy_ids": [
+          "amazon-missing",
+          "amazon-late",
+          "amazon-security"
+        ],
+        "evidence_sufficient": true,
+        "requires_human": false,
+        "reason": "Rule-based demonstration policy applicability check"
+      },
+      "draft": {
+        "reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+        "policy_ids": [
+          "amazon-missing"
+        ],
+        "case_ids": [
+          "twcs-1574950-1574949"
+        ],
+        "uncertainty": "Rule-based demonstration output"
+      },
+      "critic": {
+        "passed": true,
+        "issues": [],
+        "supported": true,
+        "needs_human": false,
+        "reason": "Deterministic demonstration check"
+      },
+      "route": "auto_sent",
+      "final_reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+      "review_reason": "",
+      "evidence_checks": {
+        "policy_available": true,
+        "critic_passed": true,
+        "deterministic_checks_passed": true
+      },
+      "evidence_check_score": 3,
+      "confidence_score": 100,
+      "confidence_checks": {
+        "same_brand_cases": true,
+        "cited_policy": true,
+        "critic_approved": true,
+        "deterministic_checks": true
+      },
+      "confidence_note": "Four evidence/readiness checks, 25 points each. Not a probability of correctness.",
+      "case_id": null,
+      "latency_ms": 35679,
+      "usage": {
+        "provider": "offline_demo",
+        "model": "rule_based_demo",
+        "llm_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_cost_usd": null,
+        "calls": []
+      },
+      "execution_mode": "offline_demo",
+      "evidence_status": "checked",
+      "external_delivery": "Local auto-send simulation only; no public tweets are posted."
+    },
+    {
+      "run_id": "6cae51191706425bb9dd5efadb1aa405",
+      "brand": "AppleSupport",
+      "customer_text": "The app keeps crashing.",
+      "policy_context": "current_simulation",
+      "mode": "full_agent",
+      "cases": [
+        {
+          "case_id": "twcs-269174-269173",
+          "customer_text": "[USER] apps keep crashing for some reason:/",
+          "created_at": "2017-10-05T22:51:35+00:00",
+          "doc_type": "historical_case",
+          "conversation_id": "component-269171",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "brand": "AppleSupport",
+          "historical_reply": "[USER] We\u2019d like to understand more about this. Which device are you using and which apps aren't working?",
+          "similarity": 0.7412
+        },
+        {
+          "case_id": "twcs-1828303-1828302",
+          "customer_text": "[USER] my apps keep crashing! Especially Instagram and Snapchat. Is there something wrong with the app or software.",
+          "created_at": "2017-10-17T06:26:45+00:00",
+          "historical_reply": "[USER] That's not the experience we'd want you to have. Send us a DM with details of your experience and we'll continue from there. [URL]",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "doc_type": "historical_case",
+          "conversation_id": "component-1828302",
+          "brand": "AppleSupport",
+          "similarity": 0.74
+        },
+        {
+          "case_id": "twcs-2060521-2060520",
+          "customer_text": "[USER] fix this iOS!! For god sake! It is crashing every time I open a new app! \ud83d\ude24\ud83d\ude24\ud83d\ude21 AAAAAAAAA",
+          "brand": "AppleSupport",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "doc_type": "historical_case",
+          "conversation_id": "component-2060520",
+          "historical_reply": "[USER] That's definitely not what we'd expect and we'd like to help. What type of device are you using? Tell us via DM. [URL]",
+          "created_at": "2017-10-07T13:59:17+00:00",
+          "similarity": 0.7165
+        },
+        {
+          "case_id": "twcs-2054556-2054555",
+          "customer_text": "my apps keep crashing... [USER] [USER] help ?",
+          "brand": "AppleSupport",
+          "created_at": "2017-10-05T05:22:06+00:00",
+          "historical_reply": "[USER] We want you to be able to enjoy your apps; we'll do all we can to help. Connect with us in DM to continue: [URL]",
+          "conversation_id": "component-2054555",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "doc_type": "historical_case",
+          "similarity": 0.6846
+        },
+        {
+          "case_id": "twcs-1692496-1692495",
+          "customer_text": "i am stressing out so much with this new update. my phone keeps dying on me randomly and the apps keep crashing. please fix this ;( [USER]",
+          "doc_type": "historical_case",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "conversation_id": "component-1692495",
+          "created_at": "2017-11-06T15:30:48+00:00",
+          "brand": "AppleSupport",
+          "historical_reply": "[USER] We are here to help. DM us your exact iOS version and we can take a look at this. [URL]",
+          "similarity": 0.683
+        }
+      ],
+      "policies": [
+        {
+          "policy_id": "apple-app",
+          "topic": "App crashes or will not open",
+          "effective_from": "unknown",
+          "brand": "AppleSupport",
+          "demo_reply": "I'm sorry the app is crashing. Try closing and reopening it, restarting your device, and checking for app and iOS updates. Which app and software version are affected? Please keep personal details private.",
+          "retrieved_at": "2026-11-20",
+          "doc_type": "policy",
+          "text": "For an iPhone or iPad app that stops responding, the official troubleshooting sequence includes closing and reopening the app, restarting the device, checking for updates, and if necessary deleting and downloading the app again. Deleting an app can lose app-stored data, so this requires care. If the problem remains, the app developer may need to help.",
+          "source_type": "official_current",
+          "source_url": "https://support.apple.com/en-gb/119876",
+          "review_status": "source_verified",
+          "similarity": 0.6765
+        },
+        {
+          "policy_id": "apple-password",
+          "doc_type": "policy",
+          "effective_from": "unknown",
+          "review_status": "source_verified",
+          "source_url": "https://support.apple.com/en-us/102656",
+          "text": "A trusted signed-in device and trusted phone number can help reset an Apple Account password. Choose Forgot Password and follow the official instructions. If available recovery factors are insufficient, account recovery may be necessary and may take time. Public support replies must not ask the customer to post passwords, verification codes or recovery information.",
+          "source_type": "official_current",
+          "topic": "Forgotten Apple Account password",
+          "demo_reply": "You can start with Forgot Password on a trusted Apple device and follow the onscreen instructions. If you cannot use a trusted device or recovery factors, use Apple account recovery. Keep recovery details private.",
+          "brand": "AppleSupport",
+          "retrieved_at": "2026-11-20",
+          "similarity": 0.1538
+        }
+      ],
+      "policy_searched": true,
+      "cases_searched": true,
+      "searches": 2,
+      "research_done": true,
+      "draft_history": [
+        {
+          "reply": "I'm sorry the app is crashing. Try closing and reopening it, restarting your device, and checking for app and iOS updates. Which app and software version are affected? Please keep personal details private.",
+          "policy_ids": [
+            "apple-app"
+          ],
+          "case_ids": [
+            "twcs-269174-269173"
+          ],
+          "uncertainty": "Rule-based demonstration output"
+        }
+      ],
+      "critic_history": [
+        {
+          "passed": true,
+          "issues": [],
+          "supported": true,
+          "needs_human": false,
+          "reason": "Deterministic demonstration check"
+        }
+      ],
+      "rewrite_count": 0,
+      "trace": [
+        {
+          "stage": "triage",
+          "summary": "Rule-based demonstration classification",
+          "result": {
+            "intent": "bug",
+            "sentiment": -0.5,
+            "urgency": "med",
+            "risk_flags": [],
+            "needs_human": false,
+            "off_topic": false,
+            "spam": false,
+            "reason": "Rule-based demonstration classification",
+            "brand": "AppleSupport",
+            "vip": false
+          }
+        },
+        {
+          "stage": "router",
+          "summary": "Support issue: retrieve cases and check policy.",
+          "decision": "research"
+        },
+        {
+          "stage": "retrieval",
+          "summary": "Retrieved 5 same-brand cases.",
+          "tool": "search_cases",
+          "query": "The app keeps crashing.",
+          "results": [
+            {
+              "case_id": "twcs-269174-269173",
+              "customer_text": "[USER] apps keep crashing for some reason:/",
+              "created_at": "2017-10-05T22:51:35+00:00",
+              "doc_type": "historical_case",
+              "conversation_id": "component-269171",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "brand": "AppleSupport",
+              "historical_reply": "[USER] We\u2019d like to understand more about this. Which device are you using and which apps aren't working?",
+              "similarity": 0.7412
+            },
+            {
+              "case_id": "twcs-1828303-1828302",
+              "customer_text": "[USER] my apps keep crashing! Especially Instagram and Snapchat. Is there something wrong with the app or software.",
+              "created_at": "2017-10-17T06:26:45+00:00",
+              "historical_reply": "[USER] That's not the experience we'd want you to have. Send us a DM with details of your experience and we'll continue from there. [URL]",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "doc_type": "historical_case",
+              "conversation_id": "component-1828302",
+              "brand": "AppleSupport",
+              "similarity": 0.74
+            },
+            {
+              "case_id": "twcs-2060521-2060520",
+              "customer_text": "[USER] fix this iOS!! For god sake! It is crashing every time I open a new app! \ud83d\ude24\ud83d\ude24\ud83d\ude21 AAAAAAAAA",
+              "brand": "AppleSupport",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "doc_type": "historical_case",
+              "conversation_id": "component-2060520",
+              "historical_reply": "[USER] That's definitely not what we'd expect and we'd like to help. What type of device are you using? Tell us via DM. [URL]",
+              "created_at": "2017-10-07T13:59:17+00:00",
+              "similarity": 0.7165
+            },
+            {
+              "case_id": "twcs-2054556-2054555",
+              "customer_text": "my apps keep crashing... [USER] [USER] help ?",
+              "brand": "AppleSupport",
+              "created_at": "2017-10-05T05:22:06+00:00",
+              "historical_reply": "[USER] We want you to be able to enjoy your apps; we'll do all we can to help. Connect with us in DM to continue: [URL]",
+              "conversation_id": "component-2054555",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "doc_type": "historical_case",
+              "similarity": 0.6846
+            },
+            {
+              "case_id": "twcs-1692496-1692495",
+              "customer_text": "i am stressing out so much with this new update. my phone keeps dying on me randomly and the apps keep crashing. please fix this ;( [USER]",
+              "doc_type": "historical_case",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "conversation_id": "component-1692495",
+              "created_at": "2017-11-06T15:30:48+00:00",
+              "brand": "AppleSupport",
+              "historical_reply": "[USER] We are here to help. DM us your exact iOS version and we can take a look at this. [URL]",
+              "similarity": 0.683
+            }
+          ]
+        },
+        {
+          "stage": "policy",
+          "summary": "Retrieved 2 source-verified policy notes.",
+          "tool": "search_policy",
+          "query": "The app keeps crashing.",
+          "results": [
+            {
+              "policy_id": "apple-app",
+              "topic": "App crashes or will not open",
+              "effective_from": "unknown",
+              "brand": "AppleSupport",
+              "demo_reply": "I'm sorry the app is crashing. Try closing and reopening it, restarting your device, and checking for app and iOS updates. Which app and software version are affected? Please keep personal details private.",
+              "retrieved_at": "2026-11-20",
+              "doc_type": "policy",
+              "text": "For an iPhone or iPad app that stops responding, the official troubleshooting sequence includes closing and reopening the app, restarting the device, checking for updates, and if necessary deleting and downloading the app again. Deleting an app can lose app-stored data, so this requires care. If the problem remains, the app developer may need to help.",
+              "source_type": "official_current",
+              "source_url": "https://support.apple.com/en-gb/119876",
+              "review_status": "source_verified",
+              "similarity": 0.6765
+            },
+            {
+              "policy_id": "apple-password",
+              "doc_type": "policy",
+              "effective_from": "unknown",
+              "review_status": "source_verified",
+              "source_url": "https://support.apple.com/en-us/102656",
+              "text": "A trusted signed-in device and trusted phone number can help reset an Apple Account password. Choose Forgot Password and follow the official instructions. If available recovery factors are insufficient, account recovery may be necessary and may take time. Public support replies must not ask the customer to post passwords, verification codes or recovery information.",
+              "source_type": "official_current",
+              "topic": "Forgotten Apple Account password",
+              "demo_reply": "You can start with Forgot Password on a trusted Apple device and follow the onscreen instructions. If you cannot use a trusted device or recovery factors, use Apple account recovery. Keep recovery details private.",
+              "brand": "AppleSupport",
+              "retrieved_at": "2026-11-20",
+              "similarity": 0.1538
+            }
+          ]
+        },
+        {
+          "stage": "research",
+          "summary": "Demonstration evidence collection complete",
+          "tool": "finish_research"
+        },
+        {
+          "stage": "policy_check",
+          "summary": "Rule-based demonstration policy applicability check",
+          "result": {
+            "relevant_policy_ids": [
+              "apple-app",
+              "apple-password"
+            ],
+            "evidence_sufficient": true,
+            "requires_human": false,
+            "reason": "Rule-based demonstration policy applicability check"
+          }
+        },
+        {
+          "stage": "draft",
+          "summary": "Prepared a reply draft.",
+          "draft": {
+            "reply": "I'm sorry the app is crashing. Try closing and reopening it, restarting your device, and checking for app and iOS updates. Which app and software version are affected? Please keep personal details private.",
+            "policy_ids": [
+              "apple-app"
+            ],
+            "case_ids": [
+              "twcs-269174-269173"
+            ],
+            "uncertainty": "Rule-based demonstration output"
+          },
+          "controlled_test": false
+        },
+        {
+          "stage": "critic",
+          "summary": "Deterministic demonstration check",
+          "result": {
+            "passed": true,
+            "issues": [],
+            "supported": true,
+            "needs_human": false,
+            "reason": "Deterministic demonstration check"
+          }
+        },
+        {
+          "stage": "finalize",
+          "summary": "Auto-send simulated in the local outbox."
+        }
+      ],
+      "inject_bad_draft": false,
+      "customer_vip": false,
+      "auto_send": true,
+      "confidence_threshold": 80,
+      "triage": {
+        "intent": "bug",
+        "sentiment": -0.5,
+        "urgency": "med",
+        "risk_flags": [],
+        "needs_human": false,
+        "off_topic": false,
+        "spam": false,
+        "reason": "Rule-based demonstration classification",
+        "brand": "AppleSupport",
+        "vip": false
+      },
+      "route_decision": "research",
+      "policy_assessment": {
+        "relevant_policy_ids": [
+          "apple-app",
+          "apple-password"
+        ],
+        "evidence_sufficient": true,
+        "requires_human": false,
+        "reason": "Rule-based demonstration policy applicability check"
+      },
+      "draft": {
+        "reply": "I'm sorry the app is crashing. Try closing and reopening it, restarting your device, and checking for app and iOS updates. Which app and software version are affected? Please keep personal details private.",
+        "policy_ids": [
+          "apple-app"
+        ],
+        "case_ids": [
+          "twcs-269174-269173"
+        ],
+        "uncertainty": "Rule-based demonstration output"
+      },
+      "critic": {
+        "passed": true,
+        "issues": [],
+        "supported": true,
+        "needs_human": false,
+        "reason": "Deterministic demonstration check"
+      },
+      "route": "auto_sent",
+      "final_reply": "I'm sorry the app is crashing. Try closing and reopening it, restarting your device, and checking for app and iOS updates. Which app and software version are affected? Please keep personal details private.",
+      "review_reason": "",
+      "evidence_checks": {
+        "policy_available": true,
+        "critic_passed": true,
+        "deterministic_checks_passed": true
+      },
+      "evidence_check_score": 3,
+      "confidence_score": 100,
+      "confidence_checks": {
+        "same_brand_cases": true,
+        "cited_policy": true,
+        "critic_approved": true,
+        "deterministic_checks": true
+      },
+      "confidence_note": "Four evidence/readiness checks, 25 points each. Not a probability of correctness.",
+      "case_id": null,
+      "latency_ms": 652,
+      "usage": {
+        "provider": "offline_demo",
+        "model": "rule_based_demo",
+        "llm_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_cost_usd": null,
+        "calls": []
+      },
+      "execution_mode": "offline_demo",
+      "evidence_status": "checked",
+      "external_delivery": "Local auto-send simulation only; no public tweets are posted."
+    },
+    {
+      "run_id": "8fa5ebe4582b43fb8173b55fb74b47d8",
+      "brand": "Uber_Support",
+      "customer_text": "I was charged a cancellation fee.",
+      "policy_context": "current_simulation",
+      "mode": "full_agent",
+      "cases": [
+        {
+          "case_id": "twcs-400432-400431",
+          "customer_text": "[USER] How do I go about getting a cancellation fee reversed? I was charged for a ride that was never accepted.",
+          "created_at": "2017-10-09T18:36:17+00:00",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "doc_type": "historical_case",
+          "historical_reply": "[USER] Here to help! Send us a note at [URL] so our team can connect.",
+          "brand": "Uber_Support",
+          "conversation_id": "component-400431",
+          "similarity": 0.7609
+        },
+        {
+          "case_id": "twcs-1414939-1414938",
+          "customer_text": "[USER] I cancelled a ride least night and was emailed for $5 charge for cancellation fee. My card was charged for the full amount",
+          "historical_reply": "[USER] Sorry to hear this. Can you DM us your email address associated with your Uber account so we can follow up?",
+          "conversation_id": "component-1414938",
+          "created_at": "2017-10-28T19:31:30+00:00",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "doc_type": "historical_case",
+          "brand": "Uber_Support",
+          "similarity": 0.7514
+        },
+        {
+          "case_id": "twcs-2786565-2786563",
+          "customer_text": "[USER] Why was I charged for a trip that didn't happen? I was charged for both the cancellation and the fare. Please refund. How terrible!",
+          "brand": "Uber_Support",
+          "created_at": "2017-11-21T18:38:27+00:00",
+          "conversation_id": "component-2786563",
+          "historical_reply": "[USER] Sorry for the trouble! Send us a note here, [URL] and our team will be in touch.",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "doc_type": "historical_case",
+          "similarity": 0.7398
+        },
+        {
+          "case_id": "twcs-1683654-1683653",
+          "customer_text": "[USER] I was waiting for the driver and he cancelled. Why i was charged a $5 cancellation fee? I disputed it but didnt receive any credit",
+          "conversation_id": "component-1683653",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "historical_reply": "[USER] That's not what we like to hear, Queenie. Contact us via [URL] so we can assist.",
+          "brand": "Uber_Support",
+          "created_at": "2017-11-06T16:53:14+00:00",
+          "doc_type": "historical_case",
+          "similarity": 0.7379
+        },
+        {
+          "case_id": "twcs-150102-150100",
+          "customer_text": "[USER] I have been charged cancellation fee incorrectly. Please see.",
+          "historical_reply": "[USER] We're sorry to hear this was your experience. Contact us via [URL] and we'll be in touch.",
+          "doc_type": "historical_case",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "conversation_id": "component-150100",
+          "brand": "Uber_Support",
+          "created_at": "2017-11-24T15:03:15+00:00",
+          "similarity": 0.7353
+        }
+      ],
+      "policies": [
+        {
+          "policy_id": "uber-cancel",
+          "topic": "Cancellation fees",
+          "text": "A cancellation fee may apply after a rider is matched with a driver. Conditions and grace periods vary with location. A customer who believes the fee is incorrect can use the official cancellation-fee review process. Public information does not confirm whether a specific fee is valid or whether a refund has been issued.",
+          "brand": "Uber_Support",
+          "retrieved_at": "2026-11-20",
+          "review_status": "source_verified",
+          "source_url": "https://help.uber.com/en/riders/article/node-title?nodeId=5f6415dc-dfdb-4d64-927a-66bb06bc4f82",
+          "demo_reply": "Cancellation fees can depend on the circumstances and location. If you believe yours was charged incorrectly, please use the cancellation-fee review option in Uber Help so the trip can be reviewed securely.",
+          "doc_type": "policy",
+          "source_type": "official_current",
+          "effective_from": "unknown",
+          "similarity": 0.6379
+        },
+        {
+          "policy_id": "uber-receipt",
+          "text": "The cited Uber Help page directs riders to Account, Trips, the past trip and Receipt to check whether a cancellation fee appears. A temporary authorization can differ from a completed trip charge. Details may vary by market; avoid promising that a charge will be reversed.",
+          "doc_type": "policy",
+          "effective_from": "unknown",
+          "demo_reply": "Please check the receipt for the trip under Account and Trips in the app. If the cancellation fee appears incorrect, contact Uber Help from that trip. Please keep payment and trip identifiers private.",
+          "brand": "Uber_Support",
+          "review_status": "source_verified",
+          "retrieved_at": "2026-11-20",
+          "source_type": "official_current",
+          "topic": "Checking a cancellation charge",
+          "source_url": "https://help.uber.com/riders/article/review-my-cancellation-fee?nodeId=0c852f97-1ba2-4dce-b899-ff02668aa125",
+          "similarity": 0.5684
+        }
+      ],
+      "policy_searched": true,
+      "cases_searched": true,
+      "searches": 2,
+      "research_done": true,
+      "draft_history": [
+        {
+          "reply": "Cancellation fees can depend on the circumstances and location. If you believe yours was charged incorrectly, please use the cancellation-fee review option in Uber Help so the trip can be reviewed securely.",
+          "policy_ids": [
+            "uber-cancel"
+          ],
+          "case_ids": [
+            "twcs-400432-400431"
+          ],
+          "uncertainty": "Rule-based demonstration output"
+        }
+      ],
+      "critic_history": [
+        {
+          "passed": true,
+          "issues": [],
+          "supported": true,
+          "needs_human": false,
+          "reason": "Deterministic demonstration check"
+        }
+      ],
+      "rewrite_count": 0,
+      "trace": [
+        {
+          "stage": "triage",
+          "summary": "Rule-based demonstration classification",
+          "result": {
+            "intent": "refund",
+            "sentiment": -0.5,
+            "urgency": "med",
+            "risk_flags": [],
+            "needs_human": false,
+            "off_topic": false,
+            "spam": false,
+            "reason": "Rule-based demonstration classification",
+            "brand": "Uber_Support",
+            "vip": false
+          }
+        },
+        {
+          "stage": "router",
+          "summary": "Support issue: retrieve cases and check policy.",
+          "decision": "research"
+        },
+        {
+          "stage": "retrieval",
+          "summary": "Retrieved 5 same-brand cases.",
+          "tool": "search_cases",
+          "query": "I was charged a cancellation fee.",
+          "results": [
+            {
+              "case_id": "twcs-400432-400431",
+              "customer_text": "[USER] How do I go about getting a cancellation fee reversed? I was charged for a ride that was never accepted.",
+              "created_at": "2017-10-09T18:36:17+00:00",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "doc_type": "historical_case",
+              "historical_reply": "[USER] Here to help! Send us a note at [URL] so our team can connect.",
+              "brand": "Uber_Support",
+              "conversation_id": "component-400431",
+              "similarity": 0.7609
+            },
+            {
+              "case_id": "twcs-1414939-1414938",
+              "customer_text": "[USER] I cancelled a ride least night and was emailed for $5 charge for cancellation fee. My card was charged for the full amount",
+              "historical_reply": "[USER] Sorry to hear this. Can you DM us your email address associated with your Uber account so we can follow up?",
+              "conversation_id": "component-1414938",
+              "created_at": "2017-10-28T19:31:30+00:00",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "doc_type": "historical_case",
+              "brand": "Uber_Support",
+              "similarity": 0.7514
+            },
+            {
+              "case_id": "twcs-2786565-2786563",
+              "customer_text": "[USER] Why was I charged for a trip that didn't happen? I was charged for both the cancellation and the fare. Please refund. How terrible!",
+              "brand": "Uber_Support",
+              "created_at": "2017-11-21T18:38:27+00:00",
+              "conversation_id": "component-2786563",
+              "historical_reply": "[USER] Sorry for the trouble! Send us a note here, [URL] and our team will be in touch.",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "doc_type": "historical_case",
+              "similarity": 0.7398
+            },
+            {
+              "case_id": "twcs-1683654-1683653",
+              "customer_text": "[USER] I was waiting for the driver and he cancelled. Why i was charged a $5 cancellation fee? I disputed it but didnt receive any credit",
+              "conversation_id": "component-1683653",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "historical_reply": "[USER] That's not what we like to hear, Queenie. Contact us via [URL] so we can assist.",
+              "brand": "Uber_Support",
+              "created_at": "2017-11-06T16:53:14+00:00",
+              "doc_type": "historical_case",
+              "similarity": 0.7379
+            },
+            {
+              "case_id": "twcs-150102-150100",
+              "customer_text": "[USER] I have been charged cancellation fee incorrectly. Please see.",
+              "historical_reply": "[USER] We're sorry to hear this was your experience. Contact us via [URL] and we'll be in touch.",
+              "doc_type": "historical_case",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "conversation_id": "component-150100",
+              "brand": "Uber_Support",
+              "created_at": "2017-11-24T15:03:15+00:00",
+              "similarity": 0.7353
+            }
+          ]
+        },
+        {
+          "stage": "policy",
+          "summary": "Retrieved 2 source-verified policy notes.",
+          "tool": "search_policy",
+          "query": "I was charged a cancellation fee.",
+          "results": [
+            {
+              "policy_id": "uber-cancel",
+              "topic": "Cancellation fees",
+              "text": "A cancellation fee may apply after a rider is matched with a driver. Conditions and grace periods vary with location. A customer who believes the fee is incorrect can use the official cancellation-fee review process. Public information does not confirm whether a specific fee is valid or whether a refund has been issued.",
+              "brand": "Uber_Support",
+              "retrieved_at": "2026-11-20",
+              "review_status": "source_verified",
+              "source_url": "https://help.uber.com/en/riders/article/node-title?nodeId=5f6415dc-dfdb-4d64-927a-66bb06bc4f82",
+              "demo_reply": "Cancellation fees can depend on the circumstances and location. If you believe yours was charged incorrectly, please use the cancellation-fee review option in Uber Help so the trip can be reviewed securely.",
+              "doc_type": "policy",
+              "source_type": "official_current",
+              "effective_from": "unknown",
+              "similarity": 0.6379
+            },
+            {
+              "policy_id": "uber-receipt",
+              "text": "The cited Uber Help page directs riders to Account, Trips, the past trip and Receipt to check whether a cancellation fee appears. A temporary authorization can differ from a completed trip charge. Details may vary by market; avoid promising that a charge will be reversed.",
+              "doc_type": "policy",
+              "effective_from": "unknown",
+              "demo_reply": "Please check the receipt for the trip under Account and Trips in the app. If the cancellation fee appears incorrect, contact Uber Help from that trip. Please keep payment and trip identifiers private.",
+              "brand": "Uber_Support",
+              "review_status": "source_verified",
+              "retrieved_at": "2026-11-20",
+              "source_type": "official_current",
+              "topic": "Checking a cancellation charge",
+              "source_url": "https://help.uber.com/riders/article/review-my-cancellation-fee?nodeId=0c852f97-1ba2-4dce-b899-ff02668aa125",
+              "similarity": 0.5684
+            }
+          ]
+        },
+        {
+          "stage": "research",
+          "summary": "Demonstration evidence collection complete",
+          "tool": "finish_research"
+        },
+        {
+          "stage": "policy_check",
+          "summary": "Rule-based demonstration policy applicability check",
+          "result": {
+            "relevant_policy_ids": [
+              "uber-cancel",
+              "uber-receipt"
+            ],
+            "evidence_sufficient": true,
+            "requires_human": false,
+            "reason": "Rule-based demonstration policy applicability check"
+          }
+        },
+        {
+          "stage": "draft",
+          "summary": "Prepared a reply draft.",
+          "draft": {
+            "reply": "Cancellation fees can depend on the circumstances and location. If you believe yours was charged incorrectly, please use the cancellation-fee review option in Uber Help so the trip can be reviewed securely.",
+            "policy_ids": [
+              "uber-cancel"
+            ],
+            "case_ids": [
+              "twcs-400432-400431"
+            ],
+            "uncertainty": "Rule-based demonstration output"
+          },
+          "controlled_test": false
+        },
+        {
+          "stage": "critic",
+          "summary": "Deterministic demonstration check",
+          "result": {
+            "passed": true,
+            "issues": [],
+            "supported": true,
+            "needs_human": false,
+            "reason": "Deterministic demonstration check"
+          }
+        },
+        {
+          "stage": "finalize",
+          "summary": "Auto-send simulated in the local outbox."
+        }
+      ],
+      "inject_bad_draft": false,
+      "customer_vip": false,
+      "auto_send": true,
+      "confidence_threshold": 80,
+      "triage": {
+        "intent": "refund",
+        "sentiment": -0.5,
+        "urgency": "med",
+        "risk_flags": [],
+        "needs_human": false,
+        "off_topic": false,
+        "spam": false,
+        "reason": "Rule-based demonstration classification",
+        "brand": "Uber_Support",
+        "vip": false
+      },
+      "route_decision": "research",
+      "policy_assessment": {
+        "relevant_policy_ids": [
+          "uber-cancel",
+          "uber-receipt"
+        ],
+        "evidence_sufficient": true,
+        "requires_human": false,
+        "reason": "Rule-based demonstration policy applicability check"
+      },
+      "draft": {
+        "reply": "Cancellation fees can depend on the circumstances and location. If you believe yours was charged incorrectly, please use the cancellation-fee review option in Uber Help so the trip can be reviewed securely.",
+        "policy_ids": [
+          "uber-cancel"
+        ],
+        "case_ids": [
+          "twcs-400432-400431"
+        ],
+        "uncertainty": "Rule-based demonstration output"
+      },
+      "critic": {
+        "passed": true,
+        "issues": [],
+        "supported": true,
+        "needs_human": false,
+        "reason": "Deterministic demonstration check"
+      },
+      "route": "auto_sent",
+      "final_reply": "Cancellation fees can depend on the circumstances and location. If you believe yours was charged incorrectly, please use the cancellation-fee review option in Uber Help so the trip can be reviewed securely.",
+      "review_reason": "",
+      "evidence_checks": {
+        "policy_available": true,
+        "critic_passed": true,
+        "deterministic_checks_passed": true
+      },
+      "evidence_check_score": 3,
+      "confidence_score": 100,
+      "confidence_checks": {
+        "same_brand_cases": true,
+        "cited_policy": true,
+        "critic_approved": true,
+        "deterministic_checks": true
+      },
+      "confidence_note": "Four evidence/readiness checks, 25 points each. Not a probability of correctness.",
+      "case_id": null,
+      "latency_ms": 660,
+      "usage": {
+        "provider": "offline_demo",
+        "model": "rule_based_demo",
+        "llm_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_cost_usd": null,
+        "calls": []
+      },
+      "execution_mode": "offline_demo",
+      "evidence_status": "checked",
+      "external_delivery": "Local auto-send simulation only; no public tweets are posted."
+    },
+    {
+      "run_id": "39274a2aa4a04e289a60378a856c793c",
+      "brand": "SpotifyCares",
+      "customer_text": "I was charged twice this month.",
+      "policy_context": "current_simulation",
+      "mode": "full_agent",
+      "cases": [
+        {
+          "case_id": "twcs-1190768-1190767",
+          "customer_text": "Why have I been charged twice in the same month?? [USER]",
+          "created_at": "2017-11-25T11:10:13+00:00",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "conversation_id": "component-1190767",
+          "brand": "SpotifyCares",
+          "doc_type": "historical_case",
+          "historical_reply": "[USER] Hi Martin! Don't worry, we'll sort this out. Could you send us a DM with your account's email address and username? We'll check behind the scenes /NJ [URL]",
+          "similarity": 0.817
+        },
+        {
+          "case_id": "twcs-1206296-1206295",
+          "customer_text": "[USER] Hi, I've just noticed I've been charged twice this month, can you help please?",
+          "doc_type": "historical_case",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "historical_reply": "[USER] Hi there! We've just sent a DM your way. Let's carry on chatting there /AK",
+          "conversation_id": "component-1206295",
+          "created_at": "2017-10-15T16:21:34+00:00",
+          "brand": "SpotifyCares",
+          "similarity": 0.8051
+        },
+        {
+          "case_id": "twcs-1797690-1797689",
+          "customer_text": "[USER] i got charged twice this month???",
+          "brand": "SpotifyCares",
+          "doc_type": "historical_case",
+          "created_at": "2017-10-13T20:25:49+00:00",
+          "conversation_id": "component-1797687",
+          "historical_reply": "[USER] Hey there, help's here! Can you DM us your account's username and email address? We'll take a look backstage /KL [URL]",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "similarity": 0.8028
+        },
+        {
+          "case_id": "twcs-1206539-1206538",
+          "customer_text": "[USER] Hi I've been charged twice this month can you look into it for me?",
+          "doc_type": "historical_case",
+          "brand": "SpotifyCares",
+          "created_at": "2017-10-25T08:49:37+00:00",
+          "historical_reply": "[USER] Hey there! Can you DM us your account's username or email address? We'll be happy to look into this /PL [URL]",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "conversation_id": "component-1206538",
+          "similarity": 0.7323
+        },
+        {
+          "case_id": "twcs-1966987-1966986",
+          "customer_text": "[USER] hi I've been charged twice for last few months can you help please?",
+          "doc_type": "historical_case",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "brand": "SpotifyCares",
+          "historical_reply": "[USER] Hey, help's here. Could you send us a DM with your account's email address or username? We'll check things out /AY [URL]",
+          "created_at": "2017-10-31T11:04:25+00:00",
+          "conversation_id": "component-1966986",
+          "similarity": 0.7305
+        }
+      ],
+      "policies": [
+        {
+          "policy_id": "spotify-billing",
+          "review_status": "source_verified",
+          "demo_reply": "I'm sorry about the billing confusion. Please check your Spotify receipts and whether both bank entries are completed or one is pending. Another Premium account can also cause multiple charges. Keep payment details private.",
+          "retrieved_at": "2026-11-20",
+          "source_type": "official_current",
+          "effective_from": "unknown",
+          "brand": "SpotifyCares",
+          "doc_type": "policy",
+          "source_url": "https://support.spotify.com/us/article/charged-twice/",
+          "text": "Spotify advises checking account receipts and bank payment status when multiple charges appear. A pending payment may be an authorization, and a failed payment followed by a retry can produce multiple entries. Another Premium account or a plan change may also explain charges. Account-specific review is needed to determine what happened.",
+          "topic": "Multiple or duplicate charges",
+          "similarity": 0.5424
+        },
+        {
+          "policy_id": "spotify-cancel",
+          "review_status": "source_verified",
+          "source_url": "https://support.spotify.com/us/article/cancel-premium/",
+          "retrieved_at": "2026-11-20",
+          "effective_from": "unknown",
+          "doc_type": "policy",
+          "text": "Premium can generally be canceled through Manage your plan on the account page. For a paid plan, access generally continues until the next billing date, followed by the free service. A zero-priced trial may end immediately. Partner-billed subscriptions require the partner contact shown in the account. Plan-manager and member actions differ.",
+          "source_type": "official_current",
+          "topic": "Canceling Premium",
+          "brand": "SpotifyCares",
+          "demo_reply": "To cancel, open your Spotify account page, go to Manage your plan, and choose Cancel subscription. If a partner handles your billing, use its contact details on the account page. Please keep account details private.",
+          "similarity": 0.2789
+        }
+      ],
+      "policy_searched": true,
+      "cases_searched": true,
+      "searches": 2,
+      "research_done": true,
+      "draft_history": [
+        {
+          "reply": "I'm sorry about the billing confusion. Please check your Spotify receipts and whether both bank entries are completed or one is pending. Another Premium account can also cause multiple charges. Keep payment details private.",
+          "policy_ids": [
+            "spotify-billing"
+          ],
+          "case_ids": [
+            "twcs-1190768-1190767"
+          ],
+          "uncertainty": "Rule-based demonstration output"
+        }
+      ],
+      "critic_history": [
+        {
+          "passed": true,
+          "issues": [],
+          "supported": true,
+          "needs_human": false,
+          "reason": "Deterministic demonstration check"
+        }
+      ],
+      "rewrite_count": 0,
+      "trace": [
+        {
+          "stage": "triage",
+          "summary": "Rule-based demonstration classification",
+          "result": {
+            "intent": "refund",
+            "sentiment": -0.5,
+            "urgency": "med",
+            "risk_flags": [],
+            "needs_human": false,
+            "off_topic": false,
+            "spam": false,
+            "reason": "Rule-based demonstration classification",
+            "brand": "SpotifyCares",
+            "vip": false
+          }
+        },
+        {
+          "stage": "router",
+          "summary": "Support issue: retrieve cases and check policy.",
+          "decision": "research"
+        },
+        {
+          "stage": "retrieval",
+          "summary": "Retrieved 5 same-brand cases.",
+          "tool": "search_cases",
+          "query": "I was charged twice this month.",
+          "results": [
+            {
+              "case_id": "twcs-1190768-1190767",
+              "customer_text": "Why have I been charged twice in the same month?? [USER]",
+              "created_at": "2017-11-25T11:10:13+00:00",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "conversation_id": "component-1190767",
+              "brand": "SpotifyCares",
+              "doc_type": "historical_case",
+              "historical_reply": "[USER] Hi Martin! Don't worry, we'll sort this out. Could you send us a DM with your account's email address and username? We'll check behind the scenes /NJ [URL]",
+              "similarity": 0.817
+            },
+            {
+              "case_id": "twcs-1206296-1206295",
+              "customer_text": "[USER] Hi, I've just noticed I've been charged twice this month, can you help please?",
+              "doc_type": "historical_case",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "historical_reply": "[USER] Hi there! We've just sent a DM your way. Let's carry on chatting there /AK",
+              "conversation_id": "component-1206295",
+              "created_at": "2017-10-15T16:21:34+00:00",
+              "brand": "SpotifyCares",
+              "similarity": 0.8051
+            },
+            {
+              "case_id": "twcs-1797690-1797689",
+              "customer_text": "[USER] i got charged twice this month???",
+              "brand": "SpotifyCares",
+              "doc_type": "historical_case",
+              "created_at": "2017-10-13T20:25:49+00:00",
+              "conversation_id": "component-1797687",
+              "historical_reply": "[USER] Hey there, help's here! Can you DM us your account's username and email address? We'll take a look backstage /KL [URL]",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "similarity": 0.8028
+            },
+            {
+              "case_id": "twcs-1206539-1206538",
+              "customer_text": "[USER] Hi I've been charged twice this month can you look into it for me?",
+              "doc_type": "historical_case",
+              "brand": "SpotifyCares",
+              "created_at": "2017-10-25T08:49:37+00:00",
+              "historical_reply": "[USER] Hey there! Can you DM us your account's username or email address? We'll be happy to look into this /PL [URL]",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "conversation_id": "component-1206538",
+              "similarity": 0.7323
+            },
+            {
+              "case_id": "twcs-1966987-1966986",
+              "customer_text": "[USER] hi I've been charged twice for last few months can you help please?",
+              "doc_type": "historical_case",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "brand": "SpotifyCares",
+              "historical_reply": "[USER] Hey, help's here. Could you send us a DM with your account's email address or username? We'll check things out /AY [URL]",
+              "created_at": "2017-10-31T11:04:25+00:00",
+              "conversation_id": "component-1966986",
+              "similarity": 0.7305
+            }
+          ]
+        },
+        {
+          "stage": "policy",
+          "summary": "Retrieved 2 source-verified policy notes.",
+          "tool": "search_policy",
+          "query": "I was charged twice this month.",
+          "results": [
+            {
+              "policy_id": "spotify-billing",
+              "review_status": "source_verified",
+              "demo_reply": "I'm sorry about the billing confusion. Please check your Spotify receipts and whether both bank entries are completed or one is pending. Another Premium account can also cause multiple charges. Keep payment details private.",
+              "retrieved_at": "2026-11-20",
+              "source_type": "official_current",
+              "effective_from": "unknown",
+              "brand": "SpotifyCares",
+              "doc_type": "policy",
+              "source_url": "https://support.spotify.com/us/article/charged-twice/",
+              "text": "Spotify advises checking account receipts and bank payment status when multiple charges appear. A pending payment may be an authorization, and a failed payment followed by a retry can produce multiple entries. Another Premium account or a plan change may also explain charges. Account-specific review is needed to determine what happened.",
+              "topic": "Multiple or duplicate charges",
+              "similarity": 0.5424
+            },
+            {
+              "policy_id": "spotify-cancel",
+              "review_status": "source_verified",
+              "source_url": "https://support.spotify.com/us/article/cancel-premium/",
+              "retrieved_at": "2026-11-20",
+              "effective_from": "unknown",
+              "doc_type": "policy",
+              "text": "Premium can generally be canceled through Manage your plan on the account page. For a paid plan, access generally continues until the next billing date, followed by the free service. A zero-priced trial may end immediately. Partner-billed subscriptions require the partner contact shown in the account. Plan-manager and member actions differ.",
+              "source_type": "official_current",
+              "topic": "Canceling Premium",
+              "brand": "SpotifyCares",
+              "demo_reply": "To cancel, open your Spotify account page, go to Manage your plan, and choose Cancel subscription. If a partner handles your billing, use its contact details on the account page. Please keep account details private.",
+              "similarity": 0.2789
+            }
+          ]
+        },
+        {
+          "stage": "research",
+          "summary": "Demonstration evidence collection complete",
+          "tool": "finish_research"
+        },
+        {
+          "stage": "policy_check",
+          "summary": "Rule-based demonstration policy applicability check",
+          "result": {
+            "relevant_policy_ids": [
+              "spotify-billing",
+              "spotify-cancel"
+            ],
+            "evidence_sufficient": true,
+            "requires_human": false,
+            "reason": "Rule-based demonstration policy applicability check"
+          }
+        },
+        {
+          "stage": "draft",
+          "summary": "Prepared a reply draft.",
+          "draft": {
+            "reply": "I'm sorry about the billing confusion. Please check your Spotify receipts and whether both bank entries are completed or one is pending. Another Premium account can also cause multiple charges. Keep payment details private.",
+            "policy_ids": [
+              "spotify-billing"
+            ],
+            "case_ids": [
+              "twcs-1190768-1190767"
+            ],
+            "uncertainty": "Rule-based demonstration output"
+          },
+          "controlled_test": false
+        },
+        {
+          "stage": "critic",
+          "summary": "Deterministic demonstration check",
+          "result": {
+            "passed": true,
+            "issues": [],
+            "supported": true,
+            "needs_human": false,
+            "reason": "Deterministic demonstration check"
+          }
+        },
+        {
+          "stage": "finalize",
+          "summary": "Auto-send simulated in the local outbox."
+        }
+      ],
+      "inject_bad_draft": false,
+      "customer_vip": false,
+      "auto_send": true,
+      "confidence_threshold": 80,
+      "triage": {
+        "intent": "refund",
+        "sentiment": -0.5,
+        "urgency": "med",
+        "risk_flags": [],
+        "needs_human": false,
+        "off_topic": false,
+        "spam": false,
+        "reason": "Rule-based demonstration classification",
+        "brand": "SpotifyCares",
+        "vip": false
+      },
+      "route_decision": "research",
+      "policy_assessment": {
+        "relevant_policy_ids": [
+          "spotify-billing",
+          "spotify-cancel"
+        ],
+        "evidence_sufficient": true,
+        "requires_human": false,
+        "reason": "Rule-based demonstration policy applicability check"
+      },
+      "draft": {
+        "reply": "I'm sorry about the billing confusion. Please check your Spotify receipts and whether both bank entries are completed or one is pending. Another Premium account can also cause multiple charges. Keep payment details private.",
+        "policy_ids": [
+          "spotify-billing"
+        ],
+        "case_ids": [
+          "twcs-1190768-1190767"
+        ],
+        "uncertainty": "Rule-based demonstration output"
+      },
+      "critic": {
+        "passed": true,
+        "issues": [],
+        "supported": true,
+        "needs_human": false,
+        "reason": "Deterministic demonstration check"
+      },
+      "route": "auto_sent",
+      "final_reply": "I'm sorry about the billing confusion. Please check your Spotify receipts and whether both bank entries are completed or one is pending. Another Premium account can also cause multiple charges. Keep payment details private.",
+      "review_reason": "",
+      "evidence_checks": {
+        "policy_available": true,
+        "critic_passed": true,
+        "deterministic_checks_passed": true
+      },
+      "evidence_check_score": 3,
+      "confidence_score": 100,
+      "confidence_checks": {
+        "same_brand_cases": true,
+        "cited_policy": true,
+        "critic_approved": true,
+        "deterministic_checks": true
+      },
+      "confidence_note": "Four evidence/readiness checks, 25 points each. Not a probability of correctness.",
+      "case_id": null,
+      "latency_ms": 690,
+      "usage": {
+        "provider": "offline_demo",
+        "model": "rule_based_demo",
+        "llm_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_cost_usd": null,
+        "calls": []
+      },
+      "execution_mode": "offline_demo",
+      "evidence_status": "checked",
+      "external_delivery": "Local auto-send simulation only; no public tweets are posted."
+    },
+    {
+      "run_id": "ce25722f047441d8b7f29d2ebfc9611b",
+      "brand": "Delta",
+      "customer_text": "My checked bag did not arrive.",
+      "policy_context": "current_simulation",
+      "mode": "full_agent",
+      "cases": [
+        {
+          "case_id": "twcs-656565-656564",
+          "customer_text": "[USER] If my bag hasn't been scanned onto the plane according to my app, where is it? I checked in over an hour before my flight.",
+          "doc_type": "historical_case",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "conversation_id": "component-656564",
+          "created_at": "2017-10-05T12:51:39+00:00",
+          "historical_reply": "[USER] Hi Rachel! Pls DM your confirmation number and I'll be happy to assist you with this. *TJE [URL]",
+          "brand": "Delta",
+          "similarity": 0.6077
+        },
+        {
+          "case_id": "twcs-2377438-2377437",
+          "customer_text": "[USER] I have a Delta Skymiles Amex. Why am I being charged for a checked bag? (When I try to check in online)",
+          "brand": "Delta",
+          "conversation_id": "component-2377435",
+          "doc_type": "historical_case",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "created_at": "2017-11-14T03:37:42+00:00",
+          "historical_reply": "[USER] Hi! Unfortunately, our online system has no way of knowing you're a cardholder. Please check your bags at the airport so they can waive the baggage fees once you present your card. *ABN",
+          "similarity": 0.5984
+        },
+        {
+          "case_id": "twcs-1538174-1538172",
+          "customer_text": "[USER] traveling from int\u2019l, misdirected to connecting flight side, can\u2019t get bag, still waiting now @ 2.5hr mark for carryon that checked??",
+          "created_at": "2017-11-04T00:58:39+00:00",
+          "historical_reply": "[USER] Apologies for the misinformation. TSA regulations restricts the amount of liquids in carry on bags. *ACJ",
+          "doc_type": "historical_case",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "brand": "Delta",
+          "conversation_id": "component-1538172",
+          "similarity": 0.5972
+        },
+        {
+          "case_id": "twcs-1939797-1939794",
+          "customer_text": "[USER] how early present checked bags for US flight?",
+          "doc_type": "historical_case",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "historical_reply": "[USER] It depends on the airport, however, typically, the earliest is 4 hours before flights departure time. *ACJ",
+          "brand": "Delta",
+          "conversation_id": "component-1939791",
+          "created_at": "2017-10-29T20:03:11+00:00",
+          "similarity": 0.5956
+        },
+        {
+          "case_id": "twcs-1264733-1264734",
+          "customer_text": "Hey [USER], I've been waiting for over 20 minutes for my bags to arrive. Still nothing... What gives?",
+          "source": "thoughtvector/customer-support-on-twitter",
+          "historical_reply": "[USER] Hi, Matt. Hopefully, you've received your luggage by now. Our apologies for the delay. In the event that this happens again, and we... 1/2",
+          "conversation_id": "component-1264732",
+          "brand": "Delta",
+          "doc_type": "historical_case",
+          "created_at": "2017-10-16T04:36:31+00:00",
+          "similarity": 0.5895
+        }
+      ],
+      "policies": [
+        {
+          "policy_id": "delta-baggage",
+          "text": "For a delayed checked bag, Delta directs customers to report it at the airport baggage service office and retain the file reference for tracking or claims. Damaged and missing-item cases have separate reporting requirements. Any reimbursement depends on the case and applicable rules; a public tweet cannot establish eligibility or completed payment.",
+          "review_status": "source_verified",
+          "source_type": "official_current",
+          "source_url": "https://www.delta.com/us/en/baggage/delayed-lost-damaged-baggage",
+          "brand": "Delta",
+          "topic": "Delayed, lost or damaged baggage",
+          "doc_type": "policy",
+          "retrieved_at": "2026-11-20",
+          "demo_reply": "I'm sorry your bag is delayed. Please report it at Delta's Baggage Service Office and keep your file reference for tracking or a claim. Have you already filed a report? Please keep the reference private.",
+          "effective_from": "unknown",
+          "similarity": 0.4306
+        },
+        {
+          "policy_id": "delta-flight",
+          "doc_type": "policy",
+          "demo_reply": "I'm sorry your travel was disrupted. Please check available options in My Trips or the Fly Delta app. Refund and change options depend on your ticket and circumstances. Keep your confirmation details private.",
+          "effective_from": "unknown",
+          "brand": "Delta",
+          "review_status": "source_verified",
+          "source_url": "https://www.delta.com/us/en/need-help/support-flights",
+          "retrieved_at": "2026-11-20",
+          "source_type": "official_current",
+          "text": "Delta provides flight change and cancellation assistance through My Trips and the Fly Delta app. Refund or cancellation options depend on the ticket and disruption. A ticket bought through a third-party agency may require that agency's assistance. A public reply should not guarantee rebooking, compensation, or a refund without reviewing the booking.",
+          "topic": "Flight changes and cancellations",
+          "similarity": 0.0712
+        }
+      ],
+      "policy_searched": true,
+      "cases_searched": true,
+      "searches": 2,
+      "research_done": true,
+      "draft_history": [
+        {
+          "reply": "I'm sorry your bag is delayed. Please report it at Delta's Baggage Service Office and keep your file reference for tracking or a claim. Have you already filed a report? Please keep the reference private.",
+          "policy_ids": [
+            "delta-baggage"
+          ],
+          "case_ids": [
+            "twcs-656565-656564"
+          ],
+          "uncertainty": "Rule-based demonstration output"
+        }
+      ],
+      "critic_history": [
+        {
+          "passed": true,
+          "issues": [],
+          "supported": true,
+          "needs_human": false,
+          "reason": "Deterministic demonstration check"
+        }
+      ],
+      "rewrite_count": 0,
+      "trace": [
+        {
+          "stage": "triage",
+          "summary": "Rule-based demonstration classification",
+          "result": {
+            "intent": "delay",
+            "sentiment": -0.5,
+            "urgency": "med",
+            "risk_flags": [],
+            "needs_human": false,
+            "off_topic": false,
+            "spam": false,
+            "reason": "Rule-based demonstration classification",
+            "brand": "Delta",
+            "vip": false
+          }
+        },
+        {
+          "stage": "router",
+          "summary": "Support issue: retrieve cases and check policy.",
+          "decision": "research"
+        },
+        {
+          "stage": "retrieval",
+          "summary": "Retrieved 5 same-brand cases.",
+          "tool": "search_cases",
+          "query": "My checked bag did not arrive.",
+          "results": [
+            {
+              "case_id": "twcs-656565-656564",
+              "customer_text": "[USER] If my bag hasn't been scanned onto the plane according to my app, where is it? I checked in over an hour before my flight.",
+              "doc_type": "historical_case",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "conversation_id": "component-656564",
+              "created_at": "2017-10-05T12:51:39+00:00",
+              "historical_reply": "[USER] Hi Rachel! Pls DM your confirmation number and I'll be happy to assist you with this. *TJE [URL]",
+              "brand": "Delta",
+              "similarity": 0.6077
+            },
+            {
+              "case_id": "twcs-2377438-2377437",
+              "customer_text": "[USER] I have a Delta Skymiles Amex. Why am I being charged for a checked bag? (When I try to check in online)",
+              "brand": "Delta",
+              "conversation_id": "component-2377435",
+              "doc_type": "historical_case",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "created_at": "2017-11-14T03:37:42+00:00",
+              "historical_reply": "[USER] Hi! Unfortunately, our online system has no way of knowing you're a cardholder. Please check your bags at the airport so they can waive the baggage fees once you present your card. *ABN",
+              "similarity": 0.5984
+            },
+            {
+              "case_id": "twcs-1538174-1538172",
+              "customer_text": "[USER] traveling from int\u2019l, misdirected to connecting flight side, can\u2019t get bag, still waiting now @ 2.5hr mark for carryon that checked??",
+              "created_at": "2017-11-04T00:58:39+00:00",
+              "historical_reply": "[USER] Apologies for the misinformation. TSA regulations restricts the amount of liquids in carry on bags. *ACJ",
+              "doc_type": "historical_case",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "brand": "Delta",
+              "conversation_id": "component-1538172",
+              "similarity": 0.5972
+            },
+            {
+              "case_id": "twcs-1939797-1939794",
+              "customer_text": "[USER] how early present checked bags for US flight?",
+              "doc_type": "historical_case",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "historical_reply": "[USER] It depends on the airport, however, typically, the earliest is 4 hours before flights departure time. *ACJ",
+              "brand": "Delta",
+              "conversation_id": "component-1939791",
+              "created_at": "2017-10-29T20:03:11+00:00",
+              "similarity": 0.5956
+            },
+            {
+              "case_id": "twcs-1264733-1264734",
+              "customer_text": "Hey [USER], I've been waiting for over 20 minutes for my bags to arrive. Still nothing... What gives?",
+              "source": "thoughtvector/customer-support-on-twitter",
+              "historical_reply": "[USER] Hi, Matt. Hopefully, you've received your luggage by now. Our apologies for the delay. In the event that this happens again, and we... 1/2",
+              "conversation_id": "component-1264732",
+              "brand": "Delta",
+              "doc_type": "historical_case",
+              "created_at": "2017-10-16T04:36:31+00:00",
+              "similarity": 0.5895
+            }
+          ]
+        },
+        {
+          "stage": "policy",
+          "summary": "Retrieved 2 source-verified policy notes.",
+          "tool": "search_policy",
+          "query": "My checked bag did not arrive.",
+          "results": [
+            {
+              "policy_id": "delta-baggage",
+              "text": "For a delayed checked bag, Delta directs customers to report it at the airport baggage service office and retain the file reference for tracking or claims. Damaged and missing-item cases have separate reporting requirements. Any reimbursement depends on the case and applicable rules; a public tweet cannot establish eligibility or completed payment.",
+              "review_status": "source_verified",
+              "source_type": "official_current",
+              "source_url": "https://www.delta.com/us/en/baggage/delayed-lost-damaged-baggage",
+              "brand": "Delta",
+              "topic": "Delayed, lost or damaged baggage",
+              "doc_type": "policy",
+              "retrieved_at": "2026-11-20",
+              "demo_reply": "I'm sorry your bag is delayed. Please report it at Delta's Baggage Service Office and keep your file reference for tracking or a claim. Have you already filed a report? Please keep the reference private.",
+              "effective_from": "unknown",
+              "similarity": 0.4306
+            },
+            {
+              "policy_id": "delta-flight",
+              "doc_type": "policy",
+              "demo_reply": "I'm sorry your travel was disrupted. Please check available options in My Trips or the Fly Delta app. Refund and change options depend on your ticket and circumstances. Keep your confirmation details private.",
+              "effective_from": "unknown",
+              "brand": "Delta",
+              "review_status": "source_verified",
+              "source_url": "https://www.delta.com/us/en/need-help/support-flights",
+              "retrieved_at": "2026-11-20",
+              "source_type": "official_current",
+              "text": "Delta provides flight change and cancellation assistance through My Trips and the Fly Delta app. Refund or cancellation options depend on the ticket and disruption. A ticket bought through a third-party agency may require that agency's assistance. A public reply should not guarantee rebooking, compensation, or a refund without reviewing the booking.",
+              "topic": "Flight changes and cancellations",
+              "similarity": 0.0712
+            }
+          ]
+        },
+        {
+          "stage": "research",
+          "summary": "Demonstration evidence collection complete",
+          "tool": "finish_research"
+        },
+        {
+          "stage": "policy_check",
+          "summary": "Rule-based demonstration policy applicability check",
+          "result": {
+            "relevant_policy_ids": [
+              "delta-baggage",
+              "delta-flight"
+            ],
+            "evidence_sufficient": true,
+            "requires_human": false,
+            "reason": "Rule-based demonstration policy applicability check"
+          }
+        },
+        {
+          "stage": "draft",
+          "summary": "Prepared a reply draft.",
+          "draft": {
+            "reply": "I'm sorry your bag is delayed. Please report it at Delta's Baggage Service Office and keep your file reference for tracking or a claim. Have you already filed a report? Please keep the reference private.",
+            "policy_ids": [
+              "delta-baggage"
+            ],
+            "case_ids": [
+              "twcs-656565-656564"
+            ],
+            "uncertainty": "Rule-based demonstration output"
+          },
+          "controlled_test": false
+        },
+        {
+          "stage": "critic",
+          "summary": "Deterministic demonstration check",
+          "result": {
+            "passed": true,
+            "issues": [],
+            "supported": true,
+            "needs_human": false,
+            "reason": "Deterministic demonstration check"
+          }
+        },
+        {
+          "stage": "finalize",
+          "summary": "Auto-send simulated in the local outbox."
+        }
+      ],
+      "inject_bad_draft": false,
+      "customer_vip": false,
+      "auto_send": true,
+      "confidence_threshold": 80,
+      "triage": {
+        "intent": "delay",
+        "sentiment": -0.5,
+        "urgency": "med",
+        "risk_flags": [],
+        "needs_human": false,
+        "off_topic": false,
+        "spam": false,
+        "reason": "Rule-based demonstration classification",
+        "brand": "Delta",
+        "vip": false
+      },
+      "route_decision": "research",
+      "policy_assessment": {
+        "relevant_policy_ids": [
+          "delta-baggage",
+          "delta-flight"
+        ],
+        "evidence_sufficient": true,
+        "requires_human": false,
+        "reason": "Rule-based demonstration policy applicability check"
+      },
+      "draft": {
+        "reply": "I'm sorry your bag is delayed. Please report it at Delta's Baggage Service Office and keep your file reference for tracking or a claim. Have you already filed a report? Please keep the reference private.",
+        "policy_ids": [
+          "delta-baggage"
+        ],
+        "case_ids": [
+          "twcs-656565-656564"
+        ],
+        "uncertainty": "Rule-based demonstration output"
+      },
+      "critic": {
+        "passed": true,
+        "issues": [],
+        "supported": true,
+        "needs_human": false,
+        "reason": "Deterministic demonstration check"
+      },
+      "route": "auto_sent",
+      "final_reply": "I'm sorry your bag is delayed. Please report it at Delta's Baggage Service Office and keep your file reference for tracking or a claim. Have you already filed a report? Please keep the reference private.",
+      "review_reason": "",
+      "evidence_checks": {
+        "policy_available": true,
+        "critic_passed": true,
+        "deterministic_checks_passed": true
+      },
+      "evidence_check_score": 3,
+      "confidence_score": 100,
+      "confidence_checks": {
+        "same_brand_cases": true,
+        "cited_policy": true,
+        "critic_approved": true,
+        "deterministic_checks": true
+      },
+      "confidence_note": "Four evidence/readiness checks, 25 points each. Not a probability of correctness.",
+      "case_id": null,
+      "latency_ms": 705,
+      "usage": {
+        "provider": "offline_demo",
+        "model": "rule_based_demo",
+        "llm_calls": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "estimated_cost_usd": null,
+        "calls": []
+      },
+      "execution_mode": "offline_demo",
+      "evidence_status": "checked",
+      "external_delivery": "Local auto-send simulation only; no public tweets are posted."
+    }
+  ],
+  "vip_case": {
+    "run_id": "b66d7343f7814ac58aac59beab2d9a28",
+    "brand": "Delta",
+    "customer_text": "Please help with a flight.",
+    "policy_context": "current_simulation",
+    "mode": "full_agent",
+    "cases": [],
+    "policies": [],
+    "policy_searched": false,
+    "cases_searched": false,
+    "searches": 0,
+    "research_done": false,
+    "draft_history": [],
+    "critic_history": [],
+    "rewrite_count": 0,
+    "trace": [
+      {
+        "stage": "triage",
+        "summary": "Operator-marked VIP customer requires human support.",
+        "result": {
+          "intent": "other",
+          "sentiment": -0.5,
+          "urgency": "med",
+          "risk_flags": [
+            "verified_vip"
+          ],
+          "needs_human": true,
+          "off_topic": false,
+          "spam": false,
+          "reason": "Operator-marked VIP customer requires human support.",
+          "brand": "Delta",
+          "vip": true
+        }
+      },
+      {
+        "stage": "router",
+        "summary": "Risk/VIP flag: escalate to a human.",
+        "decision": "review"
+      },
+      {
+        "stage": "human_review",
+        "summary": "Operator-marked VIP customer requires human support."
+      },
+      {
+        "stage": "finalize",
+        "summary": "Saved for human review."
+      }
+    ],
+    "inject_bad_draft": false,
+    "customer_vip": true,
+    "auto_send": true,
+    "confidence_threshold": 80,
+    "triage": {
+      "intent": "other",
+      "sentiment": -0.5,
+      "urgency": "med",
+      "risk_flags": [
+        "verified_vip"
+      ],
+      "needs_human": true,
+      "off_topic": false,
+      "spam": false,
+      "reason": "Operator-marked VIP customer requires human support.",
+      "brand": "Delta",
+      "vip": true
+    },
+    "route_decision": "review",
+    "route": "human_review",
+    "review_reason": "Operator-marked VIP customer requires human support.",
+    "final_reply": "Thanks for flagging this. Please contact support through the official app or website so your concern can be reviewed securely.",
+    "evidence_checks": {
+      "policy_available": false,
+      "critic_passed": false,
+      "deterministic_checks_passed": false
+    },
+    "evidence_check_score": 0,
+    "confidence_score": 0,
+    "confidence_checks": {
+      "same_brand_cases": false,
+      "cited_policy": false,
+      "critic_approved": false,
+      "deterministic_checks": false
+    },
+    "confidence_note": "Four evidence/readiness checks, 25 points each. Not a probability of correctness.",
+    "case_id": null,
+    "latency_ms": 5,
+    "usage": {
+      "provider": "offline_demo",
+      "model": "rule_based_demo",
+      "llm_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_cost_usd": null,
+      "calls": []
+    },
+    "execution_mode": "offline_demo",
+    "evidence_status": "limited",
+    "external_delivery": "Local auto-send simulation only; no public tweets are posted."
+  },
+  "controlled_revision": {
+    "run_id": "6cbcbd5df94c4f8a87bc3922fd0463b7",
+    "brand": "AmazonHelp",
+    "customer_text": "My package is late.",
+    "policy_context": "current_simulation",
+    "mode": "full_agent",
+    "cases": [
+      {
+        "case_id": "twcs-1574950-1574949",
+        "customer_text": "[USER] where are my packages? You are late on your delivery YET AGAIN!! I have ordered 15 times and 12 of them are #delayed! WHAT EVEN!!",
+        "source": "thoughtvector/customer-support-on-twitter",
+        "created_at": "2017-11-04T14:46:11+00:00",
+        "historical_reply": "[USER] I'm so sorry that we didn't get you order to you in time, Jason! Can you tell me the status &amp; carrier? [URL] ^FR",
+        "doc_type": "historical_case",
+        "conversation_id": "component-1574949",
+        "brand": "AmazonHelp",
+        "similarity": 0.6822
+      },
+      {
+        "case_id": "twcs-897601-897599",
+        "customer_text": "[USER] can you tell me why my package is delayed??? I needed it like yesterday...",
+        "created_at": "2017-10-21T02:56:40+00:00",
+        "conversation_id": "component-897599",
+        "doc_type": "historical_case",
+        "historical_reply": "[USER] Just to confirm, did we miss the delivery date in the confirmation e-mail? You can check here: [URL] ^BH",
+        "source": "thoughtvector/customer-support-on-twitter",
+        "brand": "AmazonHelp",
+        "similarity": 0.6727
+      },
+      {
+        "case_id": "twcs-218983-218981",
+        "customer_text": "Ok [USER] my package was supposed to arrive today at 8pm it\u2019s almost 10 and still nothing, what can I do?",
+        "source": "thoughtvector/customer-support-on-twitter",
+        "conversation_id": "component-218981",
+        "brand": "AmazonHelp",
+        "doc_type": "historical_case",
+        "historical_reply": "[USER] I'm sorry for the delay. Orders like this typically arrive by next business day. Let us know if it doesn't show up by tomorrow. ^CL",
+        "created_at": "2017-10-05T01:56:48+00:00",
+        "similarity": 0.6638
+      },
+      {
+        "case_id": "twcs-1597256-1597255",
+        "customer_text": "[USER] Ordered a package desperately needed and it was due to arrive yesterday and is now 'running late'. Any idea of a delivery date??",
+        "brand": "AmazonHelp",
+        "historical_reply": "[USER] I'm sorry to hear your order is late! Please check here for an updated delivery date: [URL] ^BV",
+        "created_at": "2017-11-04T22:13:52+00:00",
+        "source": "thoughtvector/customer-support-on-twitter",
+        "doc_type": "historical_case",
+        "conversation_id": "component-1597253",
+        "similarity": 0.6554
+      },
+      {
+        "case_id": "twcs-924450-924448",
+        "customer_text": "Hey [USER] not only is my PRIME package late, but I can\u2019t even find out where my package is bc it shipped your delivery service.....",
+        "doc_type": "historical_case",
+        "conversation_id": "component-924448",
+        "brand": "AmazonHelp",
+        "historical_reply": "[USER] Sorry for the troubles! My team would like to look into this. Please send us information here: [URL] ^AB",
+        "source": "thoughtvector/customer-support-on-twitter",
+        "created_at": "2017-10-21T13:49:08+00:00",
+        "similarity": 0.6525
+      }
+    ],
+    "policies": [
+      {
+        "policy_id": "amazon-missing",
+        "brand": "AmazonHelp",
+        "source_type": "official_current",
+        "text": "For a package marked delivered but missing, check the address in Your Orders, delivery notices or photos, the delivery area, and whether someone accepted it. The source advises allowing 48 hours because scanning can precede arrival. If unresolved, the next contact depends on whether Amazon or a third-party seller shipped the order. No refund or arrival can be guaranteed from a tweet.",
+        "doc_type": "policy",
+        "effective_from": "unknown",
+        "retrieved_at": "2026-11-20",
+        "demo_reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+        "topic": "Package delivered but missing",
+        "review_status": "source_verified",
+        "source_url": "https://digprjsurvey.amazon.com/csad/help/node/GCU8BWGTQNJKQEBS?theme=light",
+        "similarity": 0.5009
+      },
+      {
+        "policy_id": "amazon-late",
+        "demo_reply": "I'm sorry for the delay. Please check tracking in Your Orders and any carrier notifications. If it's still unresolved after 48 hours past the estimate, contact Customer Service for an Amazon-shipped order.",
+        "retrieved_at": "2026-11-20",
+        "effective_from": "unknown",
+        "brand": "AmazonHelp",
+        "text": "For a late Amazon delivery, check tracking and carrier notifications. The page advises allowing 48 hours beyond the estimated date for unexpected delays. For an unresolved Amazon-shipped order, contact Customer Service within 30 days of the estimate. For an order shipped and sold by a third-party seller, contact that seller. This page does not establish an individual order's status.",
+        "source_type": "official_current",
+        "source_url": "https://digprjsurvey.amazon.com/csad/help/node/GL669SSDXFCJ2ZA6?theme=light",
+        "review_status": "source_verified",
+        "topic": "Late delivery and tracking",
+        "doc_type": "policy",
+        "similarity": 0.485
+      },
+      {
+        "policy_id": "amazon-security",
+        "retrieved_at": "2026-11-20",
+        "demo_reply": "Please check your account by opening the Amazon app or website directly. Avoid links in unexpected messages, and keep passwords and verification codes private. Contact official Customer Service for help.",
+        "doc_type": "policy",
+        "source_url": "https://digprjsurvey.amazon.com/csad/help/node/TapjnwRvIRtlgyLPSl",
+        "source_type": "official_current",
+        "review_status": "source_verified",
+        "effective_from": "unknown",
+        "brand": "AmazonHelp",
+        "text": "Verify unexpected order communications by signing in directly to the Amazon website or app and checking order history or Message Center. Use official support channels. Amazon warns against disclosing passwords or sensitive information through unsolicited calls or external sites. A suspected compromise requires human review rather than copying a historical reply.",
+        "topic": "Suspicious messages and account security",
+        "similarity": 0.1855
+      }
+    ],
+    "policy_searched": true,
+    "cases_searched": true,
+    "searches": 2,
+    "research_done": true,
+    "draft_history": [
+      {
+        "reply": "I've refunded your payment and guarantee delivery tomorrow.",
+        "policy_ids": [
+          "amazon-missing"
+        ],
+        "case_ids": [
+          "twcs-1574950-1574949"
+        ],
+        "uncertainty": "Deliberately seeded draft for a controlled guardrail test"
+      },
+      {
+        "reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+        "policy_ids": [
+          "amazon-missing"
+        ],
+        "case_ids": [
+          "twcs-1574950-1574949"
+        ],
+        "uncertainty": "Rule-based demonstration output"
+      }
+    ],
+    "critic_history": [
+      {
+        "passed": false,
+        "issues": [
+          "Reply promises an unverified account action or outcome"
+        ],
+        "supported": false,
+        "needs_human": false,
+        "reason": "Deterministic demonstration check"
+      },
+      {
+        "passed": true,
+        "issues": [],
+        "supported": true,
+        "needs_human": false,
+        "reason": "Deterministic demonstration check"
+      }
+    ],
+    "rewrite_count": 1,
+    "trace": [
+      {
+        "stage": "triage",
+        "summary": "Rule-based demonstration classification",
+        "result": {
+          "intent": "delay",
+          "sentiment": -0.5,
+          "urgency": "med",
+          "risk_flags": [],
+          "needs_human": false,
+          "off_topic": false,
+          "spam": false,
+          "reason": "Rule-based demonstration classification",
+          "brand": "AmazonHelp",
+          "vip": false
+        }
+      },
+      {
+        "stage": "router",
+        "summary": "Support issue: retrieve cases and check policy.",
+        "decision": "research"
+      },
+      {
+        "stage": "retrieval",
+        "summary": "Retrieved 5 same-brand cases.",
+        "tool": "search_cases",
+        "query": "My package is late.",
+        "results": [
+          {
+            "case_id": "twcs-1574950-1574949",
+            "customer_text": "[USER] where are my packages? You are late on your delivery YET AGAIN!! I have ordered 15 times and 12 of them are #delayed! WHAT EVEN!!",
+            "source": "thoughtvector/customer-support-on-twitter",
+            "created_at": "2017-11-04T14:46:11+00:00",
+            "historical_reply": "[USER] I'm so sorry that we didn't get you order to you in time, Jason! Can you tell me the status &amp; carrier? [URL] ^FR",
+            "doc_type": "historical_case",
+            "conversation_id": "component-1574949",
+            "brand": "AmazonHelp",
+            "similarity": 0.6822
+          },
+          {
+            "case_id": "twcs-897601-897599",
+            "customer_text": "[USER] can you tell me why my package is delayed??? I needed it like yesterday...",
+            "created_at": "2017-10-21T02:56:40+00:00",
+            "conversation_id": "component-897599",
+            "doc_type": "historical_case",
+            "historical_reply": "[USER] Just to confirm, did we miss the delivery date in the confirmation e-mail? You can check here: [URL] ^BH",
+            "source": "thoughtvector/customer-support-on-twitter",
+            "brand": "AmazonHelp",
+            "similarity": 0.6727
+          },
+          {
+            "case_id": "twcs-218983-218981",
+            "customer_text": "Ok [USER] my package was supposed to arrive today at 8pm it\u2019s almost 10 and still nothing, what can I do?",
+            "source": "thoughtvector/customer-support-on-twitter",
+            "conversation_id": "component-218981",
+            "brand": "AmazonHelp",
+            "doc_type": "historical_case",
+            "historical_reply": "[USER] I'm sorry for the delay. Orders like this typically arrive by next business day. Let us know if it doesn't show up by tomorrow. ^CL",
+            "created_at": "2017-10-05T01:56:48+00:00",
+            "similarity": 0.6638
+          },
+          {
+            "case_id": "twcs-1597256-1597255",
+            "customer_text": "[USER] Ordered a package desperately needed and it was due to arrive yesterday and is now 'running late'. Any idea of a delivery date??",
+            "brand": "AmazonHelp",
+            "historical_reply": "[USER] I'm sorry to hear your order is late! Please check here for an updated delivery date: [URL] ^BV",
+            "created_at": "2017-11-04T22:13:52+00:00",
+            "source": "thoughtvector/customer-support-on-twitter",
+            "doc_type": "historical_case",
+            "conversation_id": "component-1597253",
+            "similarity": 0.6554
+          },
+          {
+            "case_id": "twcs-924450-924448",
+            "customer_text": "Hey [USER] not only is my PRIME package late, but I can\u2019t even find out where my package is bc it shipped your delivery service.....",
+            "doc_type": "historical_case",
+            "conversation_id": "component-924448",
+            "brand": "AmazonHelp",
+            "historical_reply": "[USER] Sorry for the troubles! My team would like to look into this. Please send us information here: [URL] ^AB",
+            "source": "thoughtvector/customer-support-on-twitter",
+            "created_at": "2017-10-21T13:49:08+00:00",
+            "similarity": 0.6525
+          }
+        ]
+      },
+      {
+        "stage": "policy",
+        "summary": "Retrieved 3 source-verified policy notes.",
+        "tool": "search_policy",
+        "query": "My package is late.",
+        "results": [
+          {
+            "policy_id": "amazon-missing",
+            "brand": "AmazonHelp",
+            "source_type": "official_current",
+            "text": "For a package marked delivered but missing, check the address in Your Orders, delivery notices or photos, the delivery area, and whether someone accepted it. The source advises allowing 48 hours because scanning can precede arrival. If unresolved, the next contact depends on whether Amazon or a third-party seller shipped the order. No refund or arrival can be guaranteed from a tweet.",
+            "doc_type": "policy",
+            "effective_from": "unknown",
+            "retrieved_at": "2026-11-20",
+            "demo_reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+            "topic": "Package delivered but missing",
+            "review_status": "source_verified",
+            "source_url": "https://digprjsurvey.amazon.com/csad/help/node/GCU8BWGTQNJKQEBS?theme=light",
+            "similarity": 0.5009
+          },
+          {
+            "policy_id": "amazon-late",
+            "demo_reply": "I'm sorry for the delay. Please check tracking in Your Orders and any carrier notifications. If it's still unresolved after 48 hours past the estimate, contact Customer Service for an Amazon-shipped order.",
+            "retrieved_at": "2026-11-20",
+            "effective_from": "unknown",
+            "brand": "AmazonHelp",
+            "text": "For a late Amazon delivery, check tracking and carrier notifications. The page advises allowing 48 hours beyond the estimated date for unexpected delays. For an unresolved Amazon-shipped order, contact Customer Service within 30 days of the estimate. For an order shipped and sold by a third-party seller, contact that seller. This page does not establish an individual order's status.",
+            "source_type": "official_current",
+            "source_url": "https://digprjsurvey.amazon.com/csad/help/node/GL669SSDXFCJ2ZA6?theme=light",
+            "review_status": "source_verified",
+            "topic": "Late delivery and tracking",
+            "doc_type": "policy",
+            "similarity": 0.485
+          },
+          {
+            "policy_id": "amazon-security",
+            "retrieved_at": "2026-11-20",
+            "demo_reply": "Please check your account by opening the Amazon app or website directly. Avoid links in unexpected messages, and keep passwords and verification codes private. Contact official Customer Service for help.",
+            "doc_type": "policy",
+            "source_url": "https://digprjsurvey.amazon.com/csad/help/node/TapjnwRvIRtlgyLPSl",
+            "source_type": "official_current",
+            "review_status": "source_verified",
+            "effective_from": "unknown",
+            "brand": "AmazonHelp",
+            "text": "Verify unexpected order communications by signing in directly to the Amazon website or app and checking order history or Message Center. Use official support channels. Amazon warns against disclosing passwords or sensitive information through unsolicited calls or external sites. A suspected compromise requires human review rather than copying a historical reply.",
+            "topic": "Suspicious messages and account security",
+            "similarity": 0.1855
+          }
+        ]
+      },
+      {
+        "stage": "research",
+        "summary": "Demonstration evidence collection complete",
+        "tool": "finish_research"
+      },
+      {
+        "stage": "policy_check",
+        "summary": "Rule-based demonstration policy applicability check",
+        "result": {
+          "relevant_policy_ids": [
+            "amazon-missing",
+            "amazon-late",
+            "amazon-security"
+          ],
+          "evidence_sufficient": true,
+          "requires_human": false,
+          "reason": "Rule-based demonstration policy applicability check"
+        }
+      },
+      {
+        "stage": "draft",
+        "summary": "Controlled unsafe draft seeded.",
+        "draft": {
+          "reply": "I've refunded your payment and guarantee delivery tomorrow.",
+          "policy_ids": [
+            "amazon-missing"
+          ],
+          "case_ids": [
+            "twcs-1574950-1574949"
+          ],
+          "uncertainty": "Deliberately seeded draft for a controlled guardrail test"
+        },
+        "controlled_test": true
+      },
+      {
+        "stage": "critic",
+        "summary": "Deterministic demonstration check",
+        "result": {
+          "passed": false,
+          "issues": [
+            "Reply promises an unverified account action or outcome"
+          ],
+          "supported": false,
+          "needs_human": false,
+          "reason": "Deterministic demonstration check"
+        }
+      },
+      {
+        "stage": "draft",
+        "summary": "Prepared a reply draft.",
+        "draft": {
+          "reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+          "policy_ids": [
+            "amazon-missing"
+          ],
+          "case_ids": [
+            "twcs-1574950-1574949"
+          ],
+          "uncertainty": "Rule-based demonstration output"
+        },
+        "controlled_test": false
+      },
+      {
+        "stage": "critic",
+        "summary": "Deterministic demonstration check",
+        "result": {
+          "passed": true,
+          "issues": [],
+          "supported": true,
+          "needs_human": false,
+          "reason": "Deterministic demonstration check"
+        }
+      },
+      {
+        "stage": "finalize",
+        "summary": "Auto-send simulated in the local outbox."
+      }
+    ],
+    "inject_bad_draft": true,
+    "customer_vip": false,
+    "auto_send": true,
+    "confidence_threshold": 80,
+    "triage": {
+      "intent": "delay",
+      "sentiment": -0.5,
+      "urgency": "med",
+      "risk_flags": [],
+      "needs_human": false,
+      "off_topic": false,
+      "spam": false,
+      "reason": "Rule-based demonstration classification",
+      "brand": "AmazonHelp",
+      "vip": false
+    },
+    "route_decision": "research",
+    "policy_assessment": {
+      "relevant_policy_ids": [
+        "amazon-missing",
+        "amazon-late",
+        "amazon-security"
+      ],
+      "evidence_sufficient": true,
+      "requires_human": false,
+      "reason": "Rule-based demonstration policy applicability check"
+    },
+    "draft": {
+      "reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+      "policy_ids": [
+        "amazon-missing"
+      ],
+      "case_ids": [
+        "twcs-1574950-1574949"
+      ],
+      "uncertainty": "Rule-based demonstration output"
+    },
+    "critic": {
+      "passed": true,
+      "issues": [],
+      "supported": true,
+      "needs_human": false,
+      "reason": "Deterministic demonstration check"
+    },
+    "route": "auto_sent",
+    "final_reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private.",
+    "review_reason": "",
+    "evidence_checks": {
+      "policy_available": true,
+      "critic_passed": true,
+      "deterministic_checks_passed": true
+    },
+    "evidence_check_score": 3,
+    "confidence_score": 100,
+    "confidence_checks": {
+      "same_brand_cases": true,
+      "cited_policy": true,
+      "critic_approved": true,
+      "deterministic_checks": true
+    },
+    "confidence_note": "Four evidence/readiness checks, 25 points each. Not a probability of correctness.",
+    "case_id": null,
+    "latency_ms": 186,
+    "usage": {
+      "provider": "offline_demo",
+      "model": "rule_based_demo",
+      "llm_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_cost_usd": null,
+      "calls": []
+    },
+    "execution_mode": "offline_demo",
+    "evidence_status": "checked",
+    "external_delivery": "Local auto-send simulation only; no public tweets are posted."
+  }
+}

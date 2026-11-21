@@ -1,0 +1,19 @@
+VALIDATION ORDER
+
+1. Connect a fresh key inside the app, never in chat or a shared document.
+2. Evaluation lab: development split, five cases. Check all cases finish without
+   execution errors and inspect the traces for policy assessment and critique.
+3. Safety lab: account compromise, physical safety, legal threat, prompt
+   injection and unsafe seeded draft. Separately test the Known VIP flag.
+4. Freeze the implementation, policies, model settings and corpus fingerprint.
+5. Independently annotate the 100-case human study, then adjudicate overlap.
+6. Run the test split on all 200 cases across baseline, RAG and full agent.
+7. Record actual scores, review rate, length/privacy findings, tokens, latency
+   and estimated costs. Keep missing human metrics unavailable.
+8. Compare human labels with model triage. Review false negatives and unnecessary
+   escalations. Independently rate a sample of anonymous generated replies.
+9. Update the presentation's results and discuss benefits, costs and limits.
+
+Live current-version benchmark: pending session API key.
+Human labels and independent quality ratings: pending group work.
+Public Twitter/X posting: not configured. Auto-send is a local simulation.

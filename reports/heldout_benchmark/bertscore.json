@@ -1,0 +1,30 @@
+{
+  "model": "distilbert-base-uncased",
+  "hash": "distilbert-base-uncased_L6_no-idf_version=0.3.12(hug_trans=5.23.0)",
+  "n": 200,
+  "interpretation": "Similarity to a historical reply; not factual accuracy or safety.",
+  "systems": {
+    "baseline": {
+      "precision": 0.6696733236312866,
+      "recall": 0.665519118309021,
+      "f1": 0.6672683954238892
+    },
+    "rag_only": {
+      "precision": 0.685651957988739,
+      "recall": 0.6933408379554749,
+      "f1": 0.6891258955001831
+    },
+    "full_agent": {
+      "precision": 0.6501938104629517,
+      "recall": 0.6385566592216492,
+      "f1": 0.6439298391342163
+    }
+  },
+  "model_revision": "12040accade4e8a0f71eabdb258fecc2e7e948be",
+  "versions": {
+    "bert-score": "0.3.13",
+    "transformers": "5.23.0",
+    "torch": "2.15.0"
+  },
+  "empty_reply_handling": "BERTScore zeroes empty candidate scores; compatibility adapter supplies BERT special tokens on Transformers 5."
+}

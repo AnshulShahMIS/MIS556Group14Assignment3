@@ -1,0 +1,139 @@
+{
+  "scope": "Selected public support topics. These notes are not comprehensive brand manuals.",
+  "temporal_limit": "Collected in 2026. Historical effective dates are unverified. Historical replay excludes these notes.",
+  "method": "Concise paraphrases of inspected official sources. No company approval or policy authority is implied.",
+  "documents": [
+    {
+      "policy_id": "amazon-missing",
+      "brand": "AmazonHelp",
+      "topic": "Package delivered but missing",
+      "text": "For a package marked delivered but missing, check the address in Your Orders, delivery notices or photos, the delivery area, and whether someone accepted it. The source advises allowing 48 hours because scanning can precede arrival. If unresolved, the next contact depends on whether Amazon or a third-party seller shipped the order. No refund or arrival can be guaranteed from a tweet.",
+      "source_url": "https://digprjsurvey.amazon.com/csad/help/node/GCU8BWGTQNJKQEBS?theme=light",
+      "source_type": "official_current",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "review_status": "source_verified",
+      "demo_reply": "I'm sorry your package is missing. Please check Your Orders, any delivery photo, and nearby delivery locations. Was it shipped by Amazon or a third-party seller? Please keep order details private."
+    },
+    {
+      "policy_id": "amazon-late",
+      "brand": "AmazonHelp",
+      "topic": "Late delivery and tracking",
+      "text": "For a late Amazon delivery, check tracking and carrier notifications. The page advises allowing 48 hours beyond the estimated date for unexpected delays. For an unresolved Amazon-shipped order, contact Customer Service within 30 days of the estimate. For an order shipped and sold by a third-party seller, contact that seller. This page does not establish an individual order's status.",
+      "source_url": "https://digprjsurvey.amazon.com/csad/help/node/GL669SSDXFCJ2ZA6?theme=light",
+      "source_type": "official_current",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "review_status": "source_verified",
+      "demo_reply": "I'm sorry for the delay. Please check tracking in Your Orders and any carrier notifications. If it's still unresolved after 48 hours past the estimate, contact Customer Service for an Amazon-shipped order."
+    },
+    {
+      "policy_id": "amazon-security",
+      "brand": "AmazonHelp",
+      "topic": "Suspicious messages and account security",
+      "text": "Verify unexpected order communications by signing in directly to the Amazon website or app and checking order history or Message Center. Use official support channels. Amazon warns against disclosing passwords or sensitive information through unsolicited calls or external sites. A suspected compromise requires human review rather than copying a historical reply.",
+      "source_url": "https://digprjsurvey.amazon.com/csad/help/node/TapjnwRvIRtlgyLPSl",
+      "source_type": "official_current",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "review_status": "source_verified",
+      "demo_reply": "Please check your account by opening the Amazon app or website directly. Avoid links in unexpected messages, and keep passwords and verification codes private. Contact official Customer Service for help."
+    },
+    {
+      "policy_id": "apple-password",
+      "brand": "AppleSupport",
+      "topic": "Forgotten Apple Account password",
+      "text": "A trusted signed-in device and trusted phone number can help reset an Apple Account password. Choose Forgot Password and follow the official instructions. If available recovery factors are insufficient, account recovery may be necessary and may take time. Public support replies must not ask the customer to post passwords, verification codes or recovery information.",
+      "source_url": "https://support.apple.com/en-us/102656",
+      "source_type": "official_current",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "review_status": "source_verified",
+      "demo_reply": "You can start with Forgot Password on a trusted Apple device and follow the onscreen instructions. If you cannot use a trusted device or recovery factors, use Apple account recovery. Keep recovery details private."
+    },
+    {
+      "policy_id": "apple-app",
+      "brand": "AppleSupport",
+      "topic": "App crashes or will not open",
+      "text": "For an iPhone or iPad app that stops responding, the official troubleshooting sequence includes closing and reopening the app, restarting the device, checking for updates, and if necessary deleting and downloading the app again. Deleting an app can lose app-stored data, so this requires care. If the problem remains, the app developer may need to help.",
+      "source_url": "https://support.apple.com/en-gb/119876",
+      "source_type": "official_current",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "review_status": "source_verified",
+      "demo_reply": "I'm sorry the app is crashing. Try closing and reopening it, restarting your device, and checking for app and iOS updates. Which app and software version are affected? Please keep personal details private."
+    },
+    {
+      "policy_id": "uber-cancel",
+      "brand": "Uber_Support",
+      "topic": "Cancellation fees",
+      "text": "A cancellation fee may apply after a rider is matched with a driver. Conditions and grace periods vary with location. A customer who believes the fee is incorrect can use the official cancellation-fee review process. Public information does not confirm whether a specific fee is valid or whether a refund has been issued.",
+      "source_url": "https://help.uber.com/en/riders/article/node-title?nodeId=5f6415dc-dfdb-4d64-927a-66bb06bc4f82",
+      "source_type": "official_current",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "review_status": "source_verified",
+      "demo_reply": "Cancellation fees can depend on the circumstances and location. If you believe yours was charged incorrectly, please use the cancellation-fee review option in Uber Help so the trip can be reviewed securely."
+    },
+    {
+      "policy_id": "uber-receipt",
+      "brand": "Uber_Support",
+      "topic": "Checking a cancellation charge",
+      "text": "The cited Uber Help page directs riders to Account, Trips, the past trip and Receipt to check whether a cancellation fee appears. A temporary authorization can differ from a completed trip charge. Details may vary by market; avoid promising that a charge will be reversed.",
+      "source_url": "https://help.uber.com/riders/article/review-my-cancellation-fee?nodeId=0c852f97-1ba2-4dce-b899-ff02668aa125",
+      "source_type": "official_current",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "review_status": "source_verified",
+      "demo_reply": "Please check the receipt for the trip under Account and Trips in the app. If the cancellation fee appears incorrect, contact Uber Help from that trip. Please keep payment and trip identifiers private."
+    },
+    {
+      "policy_id": "spotify-billing",
+      "brand": "SpotifyCares",
+      "topic": "Multiple or duplicate charges",
+      "text": "Spotify advises checking account receipts and bank payment status when multiple charges appear. A pending payment may be an authorization, and a failed payment followed by a retry can produce multiple entries. Another Premium account or a plan change may also explain charges. Account-specific review is needed to determine what happened.",
+      "source_url": "https://support.spotify.com/us/article/charged-twice/",
+      "source_type": "official_current",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "review_status": "source_verified",
+      "demo_reply": "I'm sorry about the billing confusion. Please check your Spotify receipts and whether both bank entries are completed or one is pending. Another Premium account can also cause multiple charges. Keep payment details private."
+    },
+    {
+      "policy_id": "spotify-cancel",
+      "brand": "SpotifyCares",
+      "topic": "Canceling Premium",
+      "text": "Premium can generally be canceled through Manage your plan on the account page. For a paid plan, access generally continues until the next billing date, followed by the free service. A zero-priced trial may end immediately. Partner-billed subscriptions require the partner contact shown in the account. Plan-manager and member actions differ.",
+      "source_url": "https://support.spotify.com/us/article/cancel-premium/",
+      "source_type": "official_current",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "review_status": "source_verified",
+      "demo_reply": "To cancel, open your Spotify account page, go to Manage your plan, and choose Cancel subscription. If a partner handles your billing, use its contact details on the account page. Please keep account details private."
+    },
+    {
+      "policy_id": "delta-baggage",
+      "brand": "Delta",
+      "topic": "Delayed, lost or damaged baggage",
+      "text": "For a delayed checked bag, Delta directs customers to report it at the airport baggage service office and retain the file reference for tracking or claims. Damaged and missing-item cases have separate reporting requirements. Any reimbursement depends on the case and applicable rules; a public tweet cannot establish eligibility or completed payment.",
+      "source_url": "https://www.delta.com/us/en/baggage/delayed-lost-damaged-baggage",
+      "source_type": "official_current",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "review_status": "source_verified",
+      "demo_reply": "I'm sorry your bag is delayed. Please report it at Delta's Baggage Service Office and keep your file reference for tracking or a claim. Have you already filed a report? Please keep the reference private."
+    },
+    {
+      "policy_id": "delta-flight",
+      "brand": "Delta",
+      "topic": "Flight changes and cancellations",
+      "text": "Delta provides flight change and cancellation assistance through My Trips and the Fly Delta app. Refund or cancellation options depend on the ticket and disruption. A ticket bought through a third-party agency may require that agency's assistance. A public reply should not guarantee rebooking, compensation, or a refund without reviewing the booking.",
+      "source_url": "https://www.delta.com/us/en/need-help/support-flights",
+      "source_type": "official_current",
+      "retrieved_at": "2026-11-20",
+      "effective_from": null,
+      "review_status": "source_verified",
+      "demo_reply": "I'm sorry your travel was disrupted. Please check available options in My Trips or the Fly Delta app. Refund and change options depend on your ticket and circumstances. Keep your confirmation details private."
+    }
+  ]
+}

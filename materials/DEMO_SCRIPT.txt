@@ -1,0 +1,37 @@
+SUPPORT COPILOT: FIVE-MINUTE PRESENTATION
+
+00:00-00:25  Cover and purpose
+Introduce the group. Explain the public-support problem and five-brand scope.
+
+00:25-01:00  Business problem
+A plausible reply can still make an unsupported promise. Explain why support
+teams need evidence and escalation, and why tool decisions add value.
+
+01:00-02:10  Agent workflow
+Explain structured triage, Python routing, adaptive searches, separate policy
+assessment, drafting, critic, two rewrites and confidence gating. Show that VIP
+comes from operator-confirmed metadata. The readiness score is heuristic.
+
+02:10-02:55  Data
+50K retrieval pairs, 100 development cases and 200 held-out cases. Grouped
+splits prevent conversation leakage. Historical responses are examples, not
+policy. Current notes have limited coverage and unverified 2017 effective dates.
+
+02:55-04:00  Results
+Use the earlier-version result table only with its version label. Explain that
+the prior baseline had higher mean judge scores and lower latency/cost. Replace
+it after the new benchmark. Never describe pending human metrics as measured.
+
+04:00-05:00  Demo and limits
+Preload a late-package example. Show triage, policy evidence and readiness.
+Mark Known VIP customer and show early escalation. If time permits, show the
+saved unsafe-draft Safety lab result. Explain the local outbox simulation.
+Close with dated data, limited coverage, latency/cost and the need for human
+validation. ROI is a what-if calculation until a timed analyst study exists.
+
+Before presenting
+Connect a fresh key privately. Never project or read the key. Warm the retrieval
+model once. Run a routine case and a risk case. Preload Safety lab results.
+Export screenshots/traces as a backup in case the internet or API is unavailable.
+Assign an operator to navigate while the presenter explains. Run a timed
+rehearsal. Confirm the final slide table matches the chosen workflow version.

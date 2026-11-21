@@ -1,0 +1,45 @@
+{
+  "model": "gpt-4.1-mini",
+  "provider": "openai",
+  "context": "current_simulation",
+  "code": {
+    "engine.py": "83530468c90d7e65a44400ec75908e6f6c141974bee8eac2ef999dfabc2470db",
+    "provider.py": "9efce0f8de4274c9d95afd3d375246e834b3125b79a2715852a49c0604a3216a",
+    "privacy.py": "f50519900fc661f056b727b4e95a2c2218501287c4a7ece28c0d6f3341c4e5cd",
+    "evaluation.py": "f9d7c8174a3734895aee09644b7c987bee8a797246dbf6f3ee5d1437b247e64c",
+    "retrieval.py": "ae0c20d0d993382d118db003bdb6adaf19a0493187ded0aa77d053bd8891146e",
+    "schemas.py": "ef5f232c97e7926cdc9c0e2332e6c600e129b01f42ff15c9cb96b6ebad0a185b",
+    "config.py": "4cd4eaa43d5ab1e3bfcb27526b7044899ad9e19736fb71794495be22acfbee0d"
+  },
+  "corpus": "90af81c44accdd6622ba93f79408bf2bcc20e9f56c6b05bd64963cd9cb185d85",
+  "policies": "4197b058f9af2e5da4a5a5fcfa9c0458d1d2dfa911a50fc1626a5f5b025b316f",
+  "splits": {
+    "development": "fbacedd5007c535fadfc5c09c7243c97fee2f730a7dea74d03d0be5bd29cd353",
+    "test": "868227c99c989e56f5b17b0a3fd5595783efc015cd140f645847a31442e66479"
+  },
+  "fingerprint": "9f6f94b5c87998e856b603c3e88b0701189e0a46d2d35c1fcf141c05798e4bf5",
+  "split": "test",
+  "policy_context": "current_simulation",
+  "temperature": 0,
+  "input_price_per_million": 0.4,
+  "output_price_per_million": 1.6,
+  "workers": 8,
+  "latency_context": "Embedding model warmed before timing; request latency excludes initial model loading.",
+  "source_snapshot": "source_snapshot/",
+  "postprocessing_note": "After the primary run, only BERTScore result unpacking and a Transformers 5 empty-input compatibility adapter were fixed. Primary generation, retrieval, triage, critic prompts, outputs and judge scores were not changed.",
+  "postprocessing_code": {
+    "evaluation.py": "f7b56cd7903a4964906ecbfd648ac86e77a6f30f88916fad6ce8a7d4f7d05408",
+    "bertscore_compat.py": "f458d934fb7cd9f7b4710fb3317a409c4a65fbe51181830e049b4a9c7eb00b37",
+    "cli.py": "f9cc8e4038bb5ffaa2db3956a5278bf8e1289faed8cda0bdcf06c110eb6e628f"
+  },
+  "environment": {
+    "langgraph": "1.2.24",
+    "chromadb": "1.5.9",
+    "sentence-transformers": "6.3.0",
+    "transformers": "5.23.0",
+    "torch": "2.15.0",
+    "bert-score": "0.3.13",
+    "httpx": "0.28.1",
+    "streamlit": "1.67.0"
+  }
+}

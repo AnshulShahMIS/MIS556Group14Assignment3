@@ -1,0 +1,602 @@
+[
+  {
+    "case_id": "twcs-1193925-1193924",
+    "brand": "AmazonHelp",
+    "customer_text": "[USER] my wife ordered a one day shipping item. It says delivered at 7:15pm but it's not here. Order# [NUMBER]",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1582511-1582509",
+    "brand": "AmazonHelp",
+    "customer_text": "Why, if I order something from [USER] for day of release, do they tell me I'm going to get it the day after? Should have gone to [USER]",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1724800-1724798",
+    "brand": "AmazonHelp",
+    "customer_text": "Hello [USER] my cable is very important to me and I need it now not tomorrow. Please help!!! [URL]",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1794121-1794120",
+    "brand": "AmazonHelp",
+    "customer_text": "[USER]. bag w/packages still here.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-712478-712476",
+    "brand": "AmazonHelp",
+    "customer_text": "[USER] how much more can i pay to get my items in a box with airbags? im tired of getting stuff dented",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-734164-734163",
+    "brand": "AmazonHelp",
+    "customer_text": "[USER] Being a prime member...Disappointed with your delivery service. Ordered one plus 5 on Oct 4, but not yet received.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-778336-778335",
+    "brand": "AmazonHelp",
+    "customer_text": "[USER] How much do you want to actually deliver the shit I order?",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-792736-792735",
+    "brand": "AmazonHelp",
+    "customer_text": "[USER] will Amazon Prime Video work in the UAE? #help",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-820126-820125",
+    "brand": "AmazonHelp",
+    "customer_text": "[USER] I need help. I don\u2019t want to speak to anymore agents who can\u2019t understand my issues. Please help me resolve my issue. PLEASE.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-838307-838308",
+    "brand": "AmazonHelp",
+    "customer_text": "Last 02days back i jst got [USER] [USER] membership for watching #ArjunReddy , latest and hit Telugu films \ud83d\ude0dadd more stuff!",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-872181-872179",
+    "brand": "AmazonHelp",
+    "customer_text": "Impatiently waiting on my amazon package to get here!! \ud83d\ude1e\ud83d\ude1e",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-910350-910349",
+    "brand": "AmazonHelp",
+    "customer_text": "[USER] going mad! Paying for prime, neither app lets me buy or watch! No troubleshooting helps! About to cancel! \ud83d\ude21grrrrrrr",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1147018-1147017",
+    "brand": "AppleSupport",
+    "customer_text": "[USER] counter hasn\u2019t moved since beginning of the challenge, I am confident I have been moving [URL]",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1166720-1166718",
+    "brand": "AppleSupport",
+    "customer_text": "[USER] I am tired of charging my iphone6s iOS 11.0.3",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1230340-1230338",
+    "brand": "AppleSupport",
+    "customer_text": "[USER] need help my daughter lock her iPhone 6 Plus and I keep getting error 4005 what can I do....",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1394490-1394488",
+    "brand": "AppleSupport",
+    "customer_text": "[USER] why does predictive text change Northern Ireland to capitals but not northern Irish?",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-2020178-2020177",
+    "brand": "AppleSupport",
+    "customer_text": "[USER] what\u2019s up with all this iOS 11.1 why do people see these boxes with question marks and a capital A when we type the letter I",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-2076086-2076085",
+    "brand": "AppleSupport",
+    "customer_text": "[USER], hi! Hope you are well. Am I being charged for each song on Ty Dolla $ign's coming album? Received many receipts for 1 album!",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-2400945-2400944",
+    "brand": "AppleSupport",
+    "customer_text": "Your iOS update sucks. It\u2019s been draining my battery ever since!The sync indicator just wouldn\u2019t stop! [USER] [USER] need a downgrade [URL]",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-371144-371143",
+    "brand": "AppleSupport",
+    "customer_text": "The calculator \u201cupgrade\u201d on iOS 11 is absolutely terrible. It does not register anything. I have to tap plus 3 times. [USER]",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-374551-374550",
+    "brand": "AppleSupport",
+    "customer_text": "[USER] [USER] all iOS 11 does is freeze my phone and make it go black with a loading circle. Seriously fix your shit thx",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-411479-411476",
+    "brand": "AppleSupport",
+    "customer_text": "[USER] how do I get podcast v10 back? V11 is useless. This entire update is horrible.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-924329-924328",
+    "brand": "AppleSupport",
+    "customer_text": "[USER] why my battery life sucking booty crack after the 8 came out? Huh?",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-967123-967121",
+    "brand": "AppleSupport",
+    "customer_text": "[USER] FIX THE FUCKING SOFTWARE FOR FUCKS SAKE, WHY DO YOU PAY STAFF IF THEY ARENT GONNA DO WHAT THEIR JOBS!!!!!",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1164025-1164027",
+    "brand": "Delta",
+    "customer_text": "[USER] as a Diamond member didn't get upgraded to an open Delta Comfort seat. Gate agent too busy telling jokes on the PA!",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1201421-1201420",
+    "brand": "Delta",
+    "customer_text": "[USER] #grandrapidsgateagent. I want you all at Delta to know that Gordon, your gate agent in GRR is the best. Smiling\ud83d\ude03 &amp; always Cheerful.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1207336-1207335",
+    "brand": "Delta",
+    "customer_text": "[USER] what\u2019s going on with the app. I can\u2019t book any miles flights without being prompted to call an agent",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1307329-1307332",
+    "brand": "Delta",
+    "customer_text": "Big thanks to the [USER] pilots from Minneapolis to Fargo for getting us safely home in very windy conditions. Much appreciated!",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-298526-298525",
+    "brand": "Delta",
+    "customer_text": "[USER] [USER] Tickets being sold by Expedia on Delta are a joke and an insult to customers. No ability to reserve seats!! #fail",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-386911-386912",
+    "brand": "Delta",
+    "customer_text": "[USER] my plane is still being de-iced here in Denver. We should've taken off almost an hour ago...my connection in ATL is only one hour. Nervous abt missing that connection.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-399992-399990",
+    "brand": "Delta",
+    "customer_text": "[USER] I'm trying to cancel a flight and can't online, or on the phone.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-411520-411519",
+    "brand": "Delta",
+    "customer_text": "Super upset regional [USER] cancelling flight today after hours l8 due ATC flow but mainline flew to BOS scheduled l8ter. Not a fool.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-688432-688431",
+    "brand": "Delta",
+    "customer_text": "[USER] nothing better than a crabby, bossy flight attendant... Flight 1971 to Charleston. Another reason I've changed my airline preference",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-845604-845603",
+    "brand": "Delta",
+    "customer_text": "[USER] how can you change inflight movie options midweek?! I wanted to finish watching The Fugitive for the 37th time.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-907571-907570",
+    "brand": "Delta",
+    "customer_text": "[USER] MANY MANY thanks to DL agents Juliet and Donny who have been kind,patient and who helped this very tired travel agent\u2764\ufe0f\u2764\ufe0f\u2764\ufe0f",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-991840-991839",
+    "brand": "Delta",
+    "customer_text": "\ud83c\udf89When is the party, [USER]?\ud83c\udf89 [URL]",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1029770-1029768",
+    "brand": "SpotifyCares",
+    "customer_text": "Furious with [USER] [USER] It's not letting me connect the accounts! [URL]",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1095442-1095441",
+    "brand": "SpotifyCares",
+    "customer_text": "The [USER] desktop app could be vastly improved by allowing keypresses to jump to artists starting with that character\u2026",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1101327-1101326",
+    "brand": "SpotifyCares",
+    "customer_text": "[USER] ive already dmd you please respond so we can get this settled!",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1199189-1199188",
+    "brand": "SpotifyCares",
+    "customer_text": "[USER] yeah i need help w my account settings",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-429680-429679",
+    "brand": "SpotifyCares",
+    "customer_text": "Updating the [USER]-Application on Desktop is actually a fun experience. They really nailed it by making a tedious task to a WOW-effect.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-430772-430774",
+    "brand": "SpotifyCares",
+    "customer_text": "Anyone else having issues w new [USER] iOS &amp; [USER] syncing with Bluetooth/car, not showing on lock screen? [USER] [USER]",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-718421-718419",
+    "brand": "SpotifyCares",
+    "customer_text": "Nothing irritates me more than buffering songs on [USER] playlist's of mine downloaded for offline listening \ud83d\ude44 esp. when I pay monthly.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-783295-783294",
+    "brand": "SpotifyCares",
+    "customer_text": "spotify been acting up\ud83d\ude44",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-910931-910930",
+    "brand": "SpotifyCares",
+    "customer_text": "[USER] \"you can only use spotify abroad for 14 days.\" Alright guess I don't need your shit app anyway",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-937019-937017",
+    "brand": "SpotifyCares",
+    "customer_text": "[USER] is there a way to show that I don't like a particular song? Several tracks winding up on my discover weekly over and over.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-959420-959418",
+    "brand": "SpotifyCares",
+    "customer_text": "[USER] [USER] Why is it im only allowed to use my Spotify abroad for only 14 days? I pay for it, thats a fucking joke [URL]",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-964933-964932",
+    "brand": "SpotifyCares",
+    "customer_text": "[USER] Hey guys. I'm from Romania and I've heard rumors that you'll be launching over here on Oct 19. Should my hopes remain high or no?",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1014960-1014959",
+    "brand": "Uber_Support",
+    "customer_text": "[USER] any plans for #columbus getting UberPOOL?",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1107396-1107395",
+    "brand": "Uber_Support",
+    "customer_text": "Honestly considering boycotting [USER]. According to my receipt, rhey charged my work card, but according to my bank acct, they charged that.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1111451-1111450",
+    "brand": "Uber_Support",
+    "customer_text": "hey [USER] fix your GPS so my drivers don\u2019t have to ask me for directions in a city i\u2019m unfamiliar with",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-1173123-1173122",
+    "brand": "Uber_Support",
+    "customer_text": "[USER] courier called after delivery time saying it was damaged. Please stop the wheelies! Accelerometer perhaps? Unhappy &amp; hungry! :-(",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-306272-306270",
+    "brand": "Uber_Support",
+    "customer_text": "[USER] need help getting lost phone back left with driver. Can\u2019t sign into account without phone.",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-365706-365707",
+    "brand": "Uber_Support",
+    "customer_text": "Uber nightmare and [USER] Help function is a multiple choice, won't take feedback... Man do I wish I'd take my own car today",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-402677-402676",
+    "brand": "Uber_Support",
+    "customer_text": "[USER] I received a weird message in Russian about legal updates? I deleted the message quickly, but does it mean my account was hacked?",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-728362-728361",
+    "brand": "Uber_Support",
+    "customer_text": "[USER] after completing my last trip and making the payment, it's asking for money and not allowing me to book a new ride",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-755597-755596",
+    "brand": "Uber_Support",
+    "customer_text": "MY UBER IS TAKING SO LONG??? WHY DOES UBER ALWAYS GIVE ME DRIVERS WHO ARE SO FAR AWAY [USER] [USER]",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-940731-940730",
+    "brand": "Uber_Support",
+    "customer_text": "Left my wallet with all of my personal info in my uber last night &amp; [USER] has yet to get me in touch with my driver or respond to my emails",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-943652-943650",
+    "brand": "Uber_Support",
+    "customer_text": "I HATE that [USER] drivers pick up other passengers on the way to YOUR destination... Going to be late to the airport... not happy",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  },
+  {
+    "case_id": "twcs-974117-974116",
+    "brand": "Uber_Support",
+    "customer_text": "[USER] I can't access my account, can we sort this out?",
+    "intent": "",
+    "urgency": "",
+    "needs_human": "",
+    "escalation_reason": "",
+    "annotator": ""
+  }
+]

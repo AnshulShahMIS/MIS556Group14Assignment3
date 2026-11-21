@@ -1,0 +1,4 @@
+system,n,errors,helpfulness,helpfulness_ci95,factual_support,factual_support_ci95,tone,tone_ci95,latency_ms_median,latency_ms_p95,review_rate,length_compliance,estimated_cost_usd,input_tokens,output_tokens,execution_error_cases,guardrail_violation_rate,promise_violation_rate,private_data_violation_rate,mean_llm_calls,mean_searches,mean_rewrites,estimated_cost_per_case_usd
+baseline,200,0,3.95,0.08648989832669947,4.275,0.10013134590207406,4.195,0.06619398779421362,1473.0,2067,0.0,0.985,0.0409384,54302,12011,0,0.025,0.005,0.0,1,0,0,0.000204692
+rag_only,200,0,3.805,0.09494592907142559,4.04,0.12099814027392629,4.15,0.07319156389315389,1826.0,2498,0.0,0.99,0.1100252,203603,17865,0,0.15,0.005,0.0,1,1,0,0.0005501260000000001
+full_agent,200,0,3.755,0.13144225015430974,4.195,0.1359188931960461,4.17,0.08689072904498989,6631.5,11570,0.505,0.99,0.3545472,695828,47635,0,0.025,0.005,0.0,4.27,1.405,0.08,0.001772736
