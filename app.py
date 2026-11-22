@@ -17,6 +17,7 @@ from support_copilot.storage import RunStore
 from support_copilot.credentials import accept_key, active_key, clear_keys
 from support_copilot.labs import SAFETY_CASES, run_safety_case, roi_scenario
 from support_copilot.annotations import validate_labels
+from support_copilot.batch_ui import render_batch_inbox
 
 st.set_page_config(page_title='Support Copilot',page_icon=str(APP_ROOT/'assets/favicon.png'),layout='wide')
 st.markdown('''<style>
@@ -120,8 +121,8 @@ if not index:
         except Exception as error:
             st.error(f'Index build failed: {type(error).__name__}. See the local server log for details.')
 
-draft_tab,queue_tab,eval_tab,ops_tab,safety_tab,knowledge_tab=st.tabs(
-    ['Draft reply','Review queue','Evaluation lab','Operations & ROI','Safety lab','Knowledge base'])
+draft_tab,batch_tab,queue_tab,eval_tab,ops_tab,safety_tab,knowledge_tab=st.tabs(
+    ['Draft reply','Batch inbox','Review queue','Evaluation lab','Operations & ROI','Safety lab','Knowledge base'])
 
 
 def display_result(result):
@@ -225,6 +226,9 @@ with draft_tab:
                     st.error(str(error))
     if st.session_state.get('last_result'):
         display_result(st.session_state['last_result'])
+
+with batch_tab:
+    render_batch_inbox(settings,retriever,store,policy_context,index is not None)
 
 with queue_tab:
     st.subheader('Human review')
