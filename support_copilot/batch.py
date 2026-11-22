@@ -136,6 +136,10 @@ def inbox_results(inbox,store):
     return output
 
 
+def spreadsheet_safe(value):
+    return "'"+value if isinstance(value,str) and value.lstrip().startswith(('=','+','-','@')) else value
+
+
 def export_csv(rows):
     """Prevent spreadsheet formula execution, including after leading whitespace."""
     if not rows:
@@ -144,7 +148,6 @@ def export_csv(rows):
     writer=csv.DictWriter(stream,fieldnames=list(rows[0]))
     writer.writeheader()
     for row in rows:
-        safe={k:("'"+v if isinstance(v,str) and v.lstrip().startswith(('=','+','-','@')) else v)
-              for k,v in row.items()}
+        safe={k:spreadsheet_safe(v) for k,v in row.items()}
         writer.writerow(safe)
     return stream.getvalue().encode('utf-8-sig')
