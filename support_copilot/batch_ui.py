@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-from .batch import SAMPLE,parse_inbox,new_inbox,process_next,inbox_results,export_csv
+from .batch import SAMPLE,parse_inbox,new_inbox,process_next,inbox_results,export_csv,spreadsheet_safe
 from .engine import SupportEngine
 from .provider import ProviderClient
 
@@ -13,7 +13,7 @@ def render_batch_inbox(settings,retriever,store,policy_context,index_ready):
                'Use Amazon, Apple, Uber, Spotify, or Delta. VIP values must be true or false and operator confirmed. '
                'Maximum 50 rows and 1 MB. Use synthetic messages; redaction cannot catch every personal detail.')
     st.download_button('Download sample inbox CSV',SAMPLE.encode(),file_name='sample_support_inbox.csv',mime='text/csv')
-    upload=st.file_uploader('Upload support inbox CSV',type=['csv'],key='batch_upload')
+    upload=st.file_uploader('Upload support inbox CSV',type=['csv'],key='batch_upload',max_upload_size=1)
     load,sample=st.columns(2)
     uploaded=load.button('Load uploaded inbox',disabled=upload is None)
     sampled=sample.button('Try sample inbox')
@@ -49,7 +49,7 @@ def render_batch_inbox(settings,retriever,store,policy_context,index_ready):
     review.metric('Needs human review',sum(r['status']=='pending' for r in preview))
     st.caption('Intake priority is a rule-based flag, not the model’s urgency classification. '
                'High-priority messages run first. All replies are drafts; nothing is posted or auto-sent.')
-    st.dataframe(pd.DataFrame(preview)[['message_id','brand','message','priority','priority_reason','status']],hide_index=True,width='stretch')
+    st.dataframe(pd.DataFrame(preview)[['message_id','brand','message','priority','priority_reason','status']].map(spreadsheet_safe),hide_index=True,width='stretch')
     size=st.select_slider('Messages per processing action',options=[1,3,5,10],value=5)
     st.caption('Processing uses your OpenAI key and incurs API charges. Each message can make several model calls. '
                'Errors stop the current action; completed or interrupted requests are not automatically repeated.')
@@ -72,7 +72,7 @@ def render_batch_inbox(settings,retriever,store,policy_context,index_ready):
                   'Rejected':{'rejected'},'Waiting':{'waiting'}}
         shown=[r for r in results if status=='All' or r['status'] in statuses.get(status,set())
                or status=='Errors / interrupted' and (r['execution_error'] or r['status']=='interrupted')]
-        st.dataframe(pd.DataFrame(shown),hide_index=True,width='stretch')
+        st.dataframe(pd.DataFrame(shown).map(spreadsheet_safe),hide_index=True,width='stretch')
         st.caption('Approve or reject flagged cases in Review queue. Refresh this view after a review to include the latest edited reply and decision in your export.')
         st.button('Refresh review decisions',key='batch_refresh')
         st.download_button('Download batch results CSV',export_csv(results),file_name='support_inbox_results.csv',mime='text/csv')
