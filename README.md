@@ -1,5 +1,30 @@
 # Support Copilot
 
+## Batch support inbox
+
+The Batch inbox tab accepts UTF-8 CSV files with `brand,message` and optional
+`message_id,customer_vip` columns. Up to 50 messages and 1 MB are accepted.
+Download the five-brand sample or select **Try sample inbox** for a free preview.
+VIP must be explicitly operator confirmed; values are `true` or `false`.
+Unsupported columns and malformed rows are rejected with row-level errors.
+Messages are redacted before processing, but redaction is incomplete: use
+synthetic examples without real customer secrets.
+
+Risk signals and VIP rows receive High intake priority before LLM triage.
+Process 1, 3, 5, or 10 messages per action using the current visitor's key.
+Replies remain drafts; batch processing disables simulated auto-send.
+Flagged runs appear in the existing Review queue, where edits and decisions
+are reflected in batch exports after refreshing. Results include agent urgency,
+readiness, estimated cost, latency, run identifiers, and evidence traces.
+CSV exports neutralize spreadsheet formula prefixes.
+
+Loading the same validated inbox preserves progress. Claimed/completed rows
+are not automatically repeated; an error stops the current processing action.
+Interrupted rows remain marked for manual inspection in run history to avoid
+silently charging twice. A different import replaces the active batch view;
+existing session run records remain available. Batch progress stays in Session
+State and is lost on reload or a new session. Export results before leaving.
+
 ## Purpose
 
 Help customer-support teams handle incoming public tweets by understanding the
