@@ -1,0 +1,12 @@
+{
+  "ui_exceptions": 0,
+  "sample_rows": 5,
+  "processing_actions": [
+    3,
+    2
+  ],
+  "human_review_integrated": true,
+  "repeat_import_preserves_progress": true,
+  "auto_send_disabled": true,
+  "provider": "test-only offline provider; no paid requests"
+}

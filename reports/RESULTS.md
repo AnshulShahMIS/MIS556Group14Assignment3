@@ -25,6 +25,6 @@ Data separation: no shared conversation components or exact normalized customer 
 
 Run results: `heldout_benchmark/summary.json`, `summary.csv`, `bertscore.json`, `manifest.json`, and per-case JSON under `cases/`. Rule-based privacy findings are detection results, not exhaustive privacy audits.
 
-Still required from the group: label the 100-case triage template, independently rate a sample of replies, analyze failures, and prepare the five-minute presentation. Triage accuracy and escalation precision/recall/F1 are deliberately unreported until real human labels exist. ROI remains a what-if calculation until a timed analyst study is done.
+Still required from the group: label the 100-case triage template, independently rate a sample of replies, analyze failures, and finalize the written report and rehearse the live demonstration. Triage accuracy and escalation precision/recall/F1 are deliberately unreported until real human labels exist. ROI remains a what-if calculation until a timed analyst study is done.
 
 Potential extensions: policy-matched fixed RAG and no-critic ablations; larger brand-specific policy coverage; calibrated release thresholds; a future-period dataset; authenticated production hosting.

@@ -1,0 +1,24 @@
+{
+  "url": "https://support-copilot-mis556-group14.streamlit.app/",
+  "repository": "https://github.com/AnshulShahMIS/MIS556Group14Assignment3",
+  "branch": "main",
+  "entrypoint": "app.py",
+  "python": "3.12",
+  "source_visibility": "private",
+  "app_visibility": "public and searchable",
+  "checks": {
+    "anonymous_https_entry": 200,
+    "hosted_ui": "loaded without exceptions",
+    "policy_search": "returned same-brand Amazon policy notes",
+    "key_submit_and_clear": "passed with noncredential placeholder",
+    "session_isolation": "primary disconnected while second connected; placeholder then cleared",
+    "packaged_ui": "six tabs, zero exceptions; passed",
+    "unit_tests_passed": 31,
+    "live_provider_check": "pending fresh visitor key"
+  },
+  "fixes": [
+    "Accept equivalent LF and CRLF corpus record separators while verifying model revision and ordered case identifiers",
+    "Use official CPU Torch wheel URL directly",
+    "Include data_audit.json with source_file reduced to twcs.csv"
+  ]
+}
