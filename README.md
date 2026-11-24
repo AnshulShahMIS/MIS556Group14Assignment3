@@ -78,10 +78,12 @@ Uber_Support, SpotifyCares and Delta.
 ## Quick start (Windows PowerShell)
 
 Open PowerShell in this extracted folder. Install Python 3.12 if needed.
+requirements-local.txt includes local evaluation and test dependencies.
+requirements.txt is reserved for the Linux Streamlit Cloud deployment.
 
 ```powershell
 py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements-local.txt
 Copy-Item .env.example .env
 ```
 

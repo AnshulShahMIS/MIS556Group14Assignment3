@@ -1,6 +1,11 @@
 {
   "files": [
     {
+      "path": ".env.example",
+      "bytes": 137,
+      "sha256": "021bd249d0563bf88bae42777d291d51349e55c3690def46137ab21049b02563"
+    },
+    {
       "path": ".gitignore",
       "bytes": 56,
       "sha256": "3b7351193232cc150ebb7ae9044ee8a645203a6de14d436b376aa1928a613c4e"
@@ -17,8 +22,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 13593,
-      "sha256": "e28c09eabe31f37b38f1f92f264e276b3d568927df8f2ac677ae9c336cbd5a31"
+      "bytes": 13744,
+      "sha256": "267da1d22393a42496f7f8b59422376baaa0a4d78f857576798e46e6cbc35f67"
     },
     {
       "path": "SECURITY.md",
@@ -1224,6 +1229,11 @@
       "path": "reports/semantic_similarity_audit.json",
       "bytes": 90111,
       "sha256": "917413e933b62d32ce79e4a9fc0e3d455f6ed8ef04d9978af4b98052c170e1b4"
+    },
+    {
+      "path": "requirements-local.txt",
+      "bytes": 335,
+      "sha256": "e76664e0aea5a1b4a62f56f69d96715d7ae3b622e204b8f2876619616a6dc721"
     },
     {
       "path": "requirements.txt",
