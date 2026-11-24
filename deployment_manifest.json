@@ -6,9 +6,9 @@
       "sha256": "3b7351193232cc150ebb7ae9044ee8a645203a6de14d436b376aa1928a613c4e"
     },
     {
-      "path": "app.py",
-      "bytes": 28720,
-      "sha256": "36c2b08a430bffa809f638c84080ce8ac213db73bd41375111f91a6f938ad91a"
+      "path": ".streamlit/config.toml",
+      "bytes": 400,
+      "sha256": "ab3f7521024c27cfa911a8ec61f81f661c44b7977612f435a63851c89fbfd690"
     },
     {
       "path": "DEPLOYMENT.md",
@@ -17,8 +17,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11364,
-      "sha256": "3eeac0fc7f497c5aef903242fb57a1a68dd440f678f75235f23878d1431fce61"
+      "bytes": 13593,
+      "sha256": "e28c09eabe31f37b38f1f92f264e276b3d568927df8f2ac677ae9c336cbd5a31"
     },
     {
       "path": "SECURITY.md",
@@ -26,9 +26,14 @@
       "sha256": "7a517173ec71063b74218eecbc5f1ca81d09ad200c5037d151bfd18dd21f379f"
     },
     {
-      "path": ".streamlit/config.toml",
-      "bytes": 400,
-      "sha256": "ab3f7521024c27cfa911a8ec61f81f661c44b7977612f435a63851c89fbfd690"
+      "path": "Support-Copilot-Assignment-3-Report.pdf",
+      "bytes": 59627,
+      "sha256": "eb0e47c154bb2ab632a57578b90ed1eed3443503ba16f4ac769c52b32a364f4c"
+    },
+    {
+      "path": "app.py",
+      "bytes": 28899,
+      "sha256": "71ed63c9fa0d5811aa3150bd3a98feae6c93a111e50d9fd301931379bdc09955"
     },
     {
       "path": "assets/favicon.png",
@@ -66,9 +71,9 @@
       "sha256": "314529ad1bb80ef9e838935eae9a9c6af9a009a74377198efece418b49e3552d"
     },
     {
-      "path": "materials/consensus_template.json",
-      "bytes": 32469,
-      "sha256": "27e098d32fc66533fcac1700908a99195ab251a0f0829df11e04e69e258446da"
+      "path": "data_audit.json",
+      "bytes": 8665,
+      "sha256": "b5f455100c075a3b05a2be59681a0efe983e0f49cecb8800e7d89f1a17bdcbbc"
     },
     {
       "path": "materials/DEMO_SCRIPT.txt",
@@ -79,6 +84,16 @@
       "path": "materials/LABELING_GUIDE.txt",
       "bytes": 3968,
       "sha256": "57f4631ace2bee06405093d0aeda6cfd148f081f74ab8898cdd14a89d1bbcf7d"
+    },
+    {
+      "path": "materials/VALIDATION_PLAN.txt",
+      "bytes": 1228,
+      "sha256": "6714e891705a33f1f58cc417b7840a9988f66a2bcd6544dc09d5c97e734ed21d"
+    },
+    {
+      "path": "materials/consensus_template.json",
+      "bytes": 32469,
+      "sha256": "27e098d32fc66533fcac1700908a99195ab251a0f0829df11e04e69e258446da"
     },
     {
       "path": "materials/policy_reference.json",
@@ -101,14 +116,24 @@
       "sha256": "b54ddc4e03fd7030999836cff7a7f5df452b6f088506ed9de47f4362651e9074"
     },
     {
-      "path": "materials/VALIDATION_PLAN.txt",
-      "bytes": 1228,
-      "sha256": "6714e891705a33f1f58cc417b7840a9988f66a2bcd6544dc09d5c97e734ed21d"
-    },
-    {
       "path": "policies/verified_notes.json",
       "bytes": 11053,
       "sha256": "4197b058f9af2e5da4a5a5fcfa9c0458d1d2dfa911a50fc1626a5f5b025b316f"
+    },
+    {
+      "path": "reports/RESULTS.md",
+      "bytes": 3295,
+      "sha256": "564caabbfb61ce430330401226c87e6e440eb050d326d27c660810dc6a88feb4"
+    },
+    {
+      "path": "reports/batch_journey_check.json",
+      "bytes": 270,
+      "sha256": "77ffc0b17852e87d681761e7c852736b513eeaac2eb78c08a3558069861b5ead"
+    },
+    {
+      "path": "reports/cloud_deployment_check.json",
+      "bytes": 1039,
+      "sha256": "22879b39a65f71c40d3dc743324b652b8de56169bcdb868ac77f97eee50f9910"
     },
     {
       "path": "reports/current_workflow_verification.json",
@@ -121,194 +146,9 @@
       "sha256": "2ab83806b8ed09f2406e52d1d019c86bee975e3e52f4c382fbc975c69719a206"
     },
     {
-      "path": "reports/live_acceptance.json",
-      "bytes": 107139,
-      "sha256": "66d3c854e233452bc86c64bf8f118959fd7b0be9dc08f092cc331bdb58250e79"
-    },
-    {
-      "path": "reports/provider_live_smoke.json",
-      "bytes": 4099,
-      "sha256": "cf3b9a33aa5ad225f37fea406024624da9a42ad8f7e5f6fad092a7d9999c21b9"
-    },
-    {
-      "path": "reports/ready_queue_audit.json",
-      "bytes": 293,
-      "sha256": "d174cdadc2b0c29722e4c0936ba1e176e0f63c8169fdeef7f6b0edcd30e08a4a"
-    },
-    {
-      "path": "reports/RESULTS.md",
-      "bytes": 3268,
-      "sha256": "603b655d15edaf480a7f334bb8d609f82bb8f48baf3f405295d222e2b9bf01d2"
-    },
-    {
-      "path": "reports/semantic_similarity_audit.json",
-      "bytes": 90111,
-      "sha256": "917413e933b62d32ce79e4a9fc0e3d455f6ed8ef04d9978af4b98052c170e1b4"
-    },
-    {
-      "path": "support_copilot/annotations.py",
-      "bytes": 2448,
-      "sha256": "f22a87d2666e84f35186dc0e0654b6f2c1fd3705e31262bf1e00ea7868d718a1"
-    },
-    {
-      "path": "support_copilot/bertscore_compat.py",
-      "bytes": 970,
-      "sha256": "f458d934fb7cd9f7b4710fb3317a409c4a65fbe51181830e049b4a9c7eb00b37"
-    },
-    {
-      "path": "support_copilot/cli.py",
-      "bytes": 2717,
-      "sha256": "f9cc8e4038bb5ffaa2db3956a5278bf8e1289faed8cda0bdcf06c110eb6e628f"
-    },
-    {
-      "path": "support_copilot/config.py",
-      "bytes": 1594,
-      "sha256": "4cd4eaa43d5ab1e3bfcb27526b7044899ad9e19736fb71794495be22acfbee0d"
-    },
-    {
-      "path": "support_copilot/credentials.py",
-      "bytes": 728,
-      "sha256": "34339b8df3e82be2c9a14c84fea5357ec5259e01ae4e93c0f90c60ba1d868a47"
-    },
-    {
-      "path": "support_copilot/engine.py",
-      "bytes": 19254,
-      "sha256": "48a135bc0a24f90afedfaf63a3d36393c01c0a53689446ceec2357b5b7345d80"
-    },
-    {
-      "path": "support_copilot/evaluation.py",
-      "bytes": 12703,
-      "sha256": "f7b56cd7903a4964906ecbfd648ac86e77a6f30f88916fad6ce8a7d4f7d05408"
-    },
-    {
-      "path": "support_copilot/labs.py",
-      "bytes": 2289,
-      "sha256": "6338b6928cf97f6e56357d309224a5fd95662a810a77310382af1652b68efe39"
-    },
-    {
-      "path": "support_copilot/privacy.py",
-      "bytes": 3007,
-      "sha256": "f50519900fc661f056b727b4e95a2c2218501287c4a7ece28c0d6f3341c4e5cd"
-    },
-    {
-      "path": "support_copilot/provider.py",
-      "bytes": 10113,
-      "sha256": "92819a121ede54d0330fcefd0e5fcf67971330712fbc8fbf9c60535676d651b7"
-    },
-    {
-      "path": "support_copilot/retrieval.py",
-      "bytes": 8154,
-      "sha256": "fa69e00e38da2c9a5c7e11ee00633d466281d0c8c71644c1b5e0a4bf75ee864b"
-    },
-    {
-      "path": "support_copilot/schemas.py",
-      "bytes": 1099,
-      "sha256": "1264017533441480e1afa7f1a05df32df6f4b30df1d08ba43c519b690bc25b68"
-    },
-    {
-      "path": "support_copilot/storage.py",
-      "bytes": 4003,
-      "sha256": "b71c0f2becb39fe82e4026b8ec0114c8bb839e58ebc08db71a123fe5e34a8804"
-    },
-    {
-      "path": "support_copilot/__init__.py",
-      "bytes": 56,
-      "sha256": "2083be31fed2c12e1f68f37a1b015a443940e4bc9414f24f3900f411f3d83589"
-    },
-    {
-      "path": "tests/test_annotations.py",
-      "bytes": 1031,
-      "sha256": "d5902b6a4c5898f5cd0afbb26481978b8736441d95ea7d219e3bffedc1ed5a38"
-    },
-    {
-      "path": "tests/test_credentials.py",
-      "bytes": 2633,
-      "sha256": "d80e79ef5921b9cba2e427b7ed13dc1b70baaf8de989b97402e7ebcedc3ab31a"
-    },
-    {
-      "path": "tests/test_retrieval.py",
-      "bytes": 2705,
-      "sha256": "1a622ba54086e98b1102d25ae597e41b721d8eb3c9fff74e79188cf7b7ad5883"
-    },
-    {
-      "path": "tests/test_similarity.py",
-      "bytes": 1018,
-      "sha256": "7b942c0d32c7c9ab292e0cef030f593b78a72cd57b51f6530a4e5ef0056072d0"
-    },
-    {
-      "path": "tests/test_system.py",
-      "bytes": 8594,
-      "sha256": "7f8e3ca47fc48f2f754af5bd30bcc5d060d2e3c988ca738e824fbe8ccd281af3"
-    },
-    {
-      "path": "tools/audit_similarity.py",
-      "bytes": 2037,
-      "sha256": "fb979a78687691204b827d5d9c1494d30f1e4c62a3e5efc082dc2476c2edab16"
-    },
-    {
-      "path": "tools/check_demo_journey.py",
-      "bytes": 3082,
-      "sha256": "f0b77bf055a7574545652c05f2c834e1590be655fb6bc1724e3b285ed0543afa"
-    },
-    {
-      "path": "tools/check_ui.py",
-      "bytes": 2208,
-      "sha256": "753b5ec4a43f5a819f2dad5c57f80703acb5e36dd03d1663eb1c20d869b28e1e"
-    },
-    {
-      "path": "tools/compare_human_labels.py",
-      "bytes": 2135,
-      "sha256": "940a41eedb039b86c845da66363b49d4c9a2bea8f5b86af31701062ffd63439b"
-    },
-    {
-      "path": "tools/export_embeddings.py",
-      "bytes": 1152,
-      "sha256": "a647ec2c0478c0da0012937e7e266e31504eedd42483989eebf25ce788f39162"
-    },
-    {
-      "path": "tools/prepare_data.py",
-      "bytes": 17871,
-      "sha256": "f9aa6c8d50ca13b74525de412b14658a7b69fdba60984b71130e7b4f1ad61f7e"
-    },
-    {
-      "path": "tools/prepare_reply_review.py",
-      "bytes": 2353,
-      "sha256": "83113d9a65c2aeb7c138ad734da6b22fd898e364a41fb89eb6411f130af9790f"
-    },
-    {
-      "path": "tools/rebalance_splits.py",
-      "bytes": 4580,
-      "sha256": "09cfc26dbedfb92621e3c2490110324f0717011aba9ff85524bebabc69310d6c"
-    },
-    {
-      "path": "tools/run_acceptance.py",
-      "bytes": 2395,
-      "sha256": "499f1dbf93d0a9ce6015b353d4660db877873db4b2ffccedb21df1d065a7d22a"
-    },
-    {
-      "path": "tools/verify_workflow.py",
-      "bytes": 2169,
-      "sha256": "072ac56929d6e95b6dcbc24a96dc18e8cf1f18ea228a6d65f623a626daf6c5ed"
-    },
-    {
       "path": "reports/heldout_benchmark/bertscore.json",
       "bytes": 967,
       "sha256": "b65bad47fc2d71d95df3e7db6355ce1501dfb19f21090a7f1fcc075d7e45c7e1"
-    },
-    {
-      "path": "reports/heldout_benchmark/manifest.json",
-      "bytes": 2292,
-      "sha256": "e6053d6cbad8df816cd0e2acb96bb2b752f597d78db9de6d1fd97f4c5659e145"
-    },
-    {
-      "path": "reports/heldout_benchmark/summary.csv",
-      "bytes": 917,
-      "sha256": "ffc0a936abc3bb52892d4bf31830b7babb6121415f68b38e91acd0c2e5dee05d"
-    },
-    {
-      "path": "reports/heldout_benchmark/summary.json",
-      "bytes": 2857,
-      "sha256": "0eb502c6460d59828fcf3d2f0582904c363700341c3c8d54371287f0b5634479"
     },
     {
       "path": "reports/heldout_benchmark/cases/twcs-1014960-1014959.json",
@@ -1311,6 +1151,16 @@
       "sha256": "b4edb8d446d61c93ffbbdc58992d99c0beb5cd0583b623f91bdaaafd189504df"
     },
     {
+      "path": "reports/heldout_benchmark/manifest.json",
+      "bytes": 2292,
+      "sha256": "e6053d6cbad8df816cd0e2acb96bb2b752f597d78db9de6d1fd97f4c5659e145"
+    },
+    {
+      "path": "reports/heldout_benchmark/source_snapshot/README.txt",
+      "bytes": 400,
+      "sha256": "4f2fc4b5ee754c9ff07a6b4e897c6aa0afe3541d4ea5db97184453c61d3ad730"
+    },
+    {
       "path": "reports/heldout_benchmark/source_snapshot/config.py",
       "bytes": 1594,
       "sha256": "4cd4eaa43d5ab1e3bfcb27526b7044899ad9e19736fb71794495be22acfbee0d"
@@ -1336,11 +1186,6 @@
       "sha256": "9efce0f8de4274c9d95afd3d375246e834b3125b79a2715852a49c0604a3216a"
     },
     {
-      "path": "reports/heldout_benchmark/source_snapshot/README.txt",
-      "bytes": 400,
-      "sha256": "4f2fc4b5ee754c9ff07a6b4e897c6aa0afe3541d4ea5db97184453c61d3ad730"
-    },
-    {
       "path": "reports/heldout_benchmark/source_snapshot/retrieval.py",
       "bytes": 7264,
       "sha256": "ae0c20d0d993382d118db003bdb6adaf19a0493187ded0aa77d053bd8891146e"
@@ -1349,19 +1194,214 @@
       "path": "reports/heldout_benchmark/source_snapshot/schemas.py",
       "bytes": 936,
       "sha256": "ef5f232c97e7926cdc9c0e2332e6c600e129b01f42ff15c9cb96b6ebad0a185b"
+    },
+    {
+      "path": "reports/heldout_benchmark/summary.csv",
+      "bytes": 917,
+      "sha256": "ffc0a936abc3bb52892d4bf31830b7babb6121415f68b38e91acd0c2e5dee05d"
+    },
+    {
+      "path": "reports/heldout_benchmark/summary.json",
+      "bytes": 2857,
+      "sha256": "0eb502c6460d59828fcf3d2f0582904c363700341c3c8d54371287f0b5634479"
+    },
+    {
+      "path": "reports/live_acceptance.json",
+      "bytes": 107139,
+      "sha256": "66d3c854e233452bc86c64bf8f118959fd7b0be9dc08f092cc331bdb58250e79"
+    },
+    {
+      "path": "reports/provider_live_smoke.json",
+      "bytes": 4099,
+      "sha256": "cf3b9a33aa5ad225f37fea406024624da9a42ad8f7e5f6fad092a7d9999c21b9"
+    },
+    {
+      "path": "reports/ready_queue_audit.json",
+      "bytes": 293,
+      "sha256": "d174cdadc2b0c29722e4c0936ba1e176e0f63c8169fdeef7f6b0edcd30e08a4a"
+    },
+    {
+      "path": "reports/semantic_similarity_audit.json",
+      "bytes": 90111,
+      "sha256": "917413e933b62d32ce79e4a9fc0e3d455f6ed8ef04d9978af4b98052c170e1b4"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 328,
+      "sha256": "0d9dc390a277c445373a90dd5df431a5d32298884abe23d5b5d8742fe3f6dcf7"
+    },
+    {
+      "path": "support_copilot/__init__.py",
+      "bytes": 56,
+      "sha256": "2083be31fed2c12e1f68f37a1b015a443940e4bc9414f24f3900f411f3d83589"
+    },
+    {
+      "path": "support_copilot/annotations.py",
+      "bytes": 2448,
+      "sha256": "f22a87d2666e84f35186dc0e0654b6f2c1fd3705e31262bf1e00ea7868d718a1"
+    },
+    {
+      "path": "support_copilot/batch.py",
+      "bytes": 7098,
+      "sha256": "183b66bab8da3d0a7f6dcc81ade8f8a2e4cc5509c5da98b18dc346ebfb0fb4ca"
+    },
+    {
+      "path": "support_copilot/batch_ui.py",
+      "bytes": 6615,
+      "sha256": "fad950e5fcfdf47300e6bafea538fdd5dedc34d3e4e82d513be9cebeb411c5ba"
+    },
+    {
+      "path": "support_copilot/bertscore_compat.py",
+      "bytes": 970,
+      "sha256": "f458d934fb7cd9f7b4710fb3317a409c4a65fbe51181830e049b4a9c7eb00b37"
+    },
+    {
+      "path": "support_copilot/cli.py",
+      "bytes": 2717,
+      "sha256": "f9cc8e4038bb5ffaa2db3956a5278bf8e1289faed8cda0bdcf06c110eb6e628f"
+    },
+    {
+      "path": "support_copilot/config.py",
+      "bytes": 1594,
+      "sha256": "4cd4eaa43d5ab1e3bfcb27526b7044899ad9e19736fb71794495be22acfbee0d"
+    },
+    {
+      "path": "support_copilot/credentials.py",
+      "bytes": 728,
+      "sha256": "34339b8df3e82be2c9a14c84fea5357ec5259e01ae4e93c0f90c60ba1d868a47"
+    },
+    {
+      "path": "support_copilot/engine.py",
+      "bytes": 19254,
+      "sha256": "48a135bc0a24f90afedfaf63a3d36393c01c0a53689446ceec2357b5b7345d80"
+    },
+    {
+      "path": "support_copilot/evaluation.py",
+      "bytes": 12703,
+      "sha256": "f7b56cd7903a4964906ecbfd648ac86e77a6f30f88916fad6ce8a7d4f7d05408"
+    },
+    {
+      "path": "support_copilot/labs.py",
+      "bytes": 2289,
+      "sha256": "6338b6928cf97f6e56357d309224a5fd95662a810a77310382af1652b68efe39"
+    },
+    {
+      "path": "support_copilot/privacy.py",
+      "bytes": 3007,
+      "sha256": "f50519900fc661f056b727b4e95a2c2218501287c4a7ece28c0d6f3341c4e5cd"
+    },
+    {
+      "path": "support_copilot/provider.py",
+      "bytes": 10113,
+      "sha256": "92819a121ede54d0330fcefd0e5fcf67971330712fbc8fbf9c60535676d651b7"
+    },
+    {
+      "path": "support_copilot/retrieval.py",
+      "bytes": 8560,
+      "sha256": "af396e15bb9dbe213f0c11620a0c40d241762fe0f29fa065c470239d77ee88d7"
+    },
+    {
+      "path": "support_copilot/schemas.py",
+      "bytes": 1099,
+      "sha256": "1264017533441480e1afa7f1a05df32df6f4b30df1d08ba43c519b690bc25b68"
+    },
+    {
+      "path": "support_copilot/storage.py",
+      "bytes": 4003,
+      "sha256": "b71c0f2becb39fe82e4026b8ec0114c8bb839e58ebc08db71a123fe5e34a8804"
+    },
+    {
+      "path": "tests/test_annotations.py",
+      "bytes": 1031,
+      "sha256": "d5902b6a4c5898f5cd0afbb26481978b8736441d95ea7d219e3bffedc1ed5a38"
+    },
+    {
+      "path": "tests/test_batch.py",
+      "bytes": 4285,
+      "sha256": "1a01abbacea89549dadad1e110c33aea4747610751219179e043c46453ebf3c4"
+    },
+    {
+      "path": "tests/test_credentials.py",
+      "bytes": 2633,
+      "sha256": "d80e79ef5921b9cba2e427b7ed13dc1b70baaf8de989b97402e7ebcedc3ab31a"
+    },
+    {
+      "path": "tests/test_retrieval.py",
+      "bytes": 2960,
+      "sha256": "2e6c3a7579e556ef1fcffacdb7f64b4c4705622d46ad8529576c55c3cf11bb52"
+    },
+    {
+      "path": "tests/test_similarity.py",
+      "bytes": 1018,
+      "sha256": "7b942c0d32c7c9ab292e0cef030f593b78a72cd57b51f6530a4e5ef0056072d0"
+    },
+    {
+      "path": "tests/test_system.py",
+      "bytes": 8594,
+      "sha256": "7f8e3ca47fc48f2f754af5bd30bcc5d060d2e3c988ca738e824fbe8ccd281af3"
+    },
+    {
+      "path": "tools/audit_similarity.py",
+      "bytes": 2037,
+      "sha256": "fb979a78687691204b827d5d9c1494d30f1e4c62a3e5efc082dc2476c2edab16"
+    },
+    {
+      "path": "tools/check_batch_journey.py",
+      "bytes": 2507,
+      "sha256": "4688fc431680f5c971aae24ad718e49b945f6f833180442ad7472c67469929ef"
+    },
+    {
+      "path": "tools/check_demo_journey.py",
+      "bytes": 3082,
+      "sha256": "f0b77bf055a7574545652c05f2c834e1590be655fb6bc1724e3b285ed0543afa"
+    },
+    {
+      "path": "tools/check_ui.py",
+      "bytes": 2222,
+      "sha256": "5f7ea87b5e1eb342aad2b0dce59ea4d6e402309a2fee5cd1605a80b85d2ca085"
+    },
+    {
+      "path": "tools/compare_human_labels.py",
+      "bytes": 2135,
+      "sha256": "940a41eedb039b86c845da66363b49d4c9a2bea8f5b86af31701062ffd63439b"
+    },
+    {
+      "path": "tools/export_embeddings.py",
+      "bytes": 1152,
+      "sha256": "a647ec2c0478c0da0012937e7e266e31504eedd42483989eebf25ce788f39162"
+    },
+    {
+      "path": "tools/prepare_data.py",
+      "bytes": 17871,
+      "sha256": "f9aa6c8d50ca13b74525de412b14658a7b69fdba60984b71130e7b4f1ad61f7e"
+    },
+    {
+      "path": "tools/prepare_reply_review.py",
+      "bytes": 2353,
+      "sha256": "83113d9a65c2aeb7c138ad734da6b22fd898e364a41fb89eb6411f130af9790f"
+    },
+    {
+      "path": "tools/rebalance_splits.py",
+      "bytes": 4580,
+      "sha256": "09cfc26dbedfb92621e3c2490110324f0717011aba9ff85524bebabc69310d6c"
+    },
+    {
+      "path": "tools/run_acceptance.py",
+      "bytes": 2395,
+      "sha256": "499f1dbf93d0a9ce6015b353d4660db877873db4b2ffccedb21df1d065a7d22a"
+    },
+    {
+      "path": "tools/verify_workflow.py",
+      "bytes": 2169,
+      "sha256": "072ac56929d6e95b6dcbc24a96dc18e8cf1f18ea228a6d65f623a626daf6c5ed"
     }
   ],
-  "unit_tests_passed": 31,
-  "hosting_verified": false,
+  "unit_tests_passed": 44,
+  "hosted_ui_verified": true,
+  "live_provider_verified": false,
+  "url": "https://support-copilot-mis556-group14.streamlit.app/?embed=true",
   "owner_key_included": false,
-  "startup_check": {
-    "cases": 50000,
-    "policies": 11,
-    "seconds": 189.9,
-    "same_brand_queries": "passed for five brands"
-  },
-  "ui_check": {
-    "exceptions": 0,
-    "session_isolation": "passed"
-  }
+  "updated_on": "2026-11-23",
+  "report": "Support-Copilot-Assignment-3-Report.pdf",
+  "benchmark_note": "200-case results are for earlier workflow; current live benchmark and human validation pending."
 }

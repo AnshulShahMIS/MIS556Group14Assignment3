@@ -1,5 +1,15 @@
 # Support Copilot
 
+## Assignment report
+
+[Download the six-page assignment report](Support-Copilot-Assignment-3-Report.pdf).
+The report covers the business problem, agent workflow, real dataset, seven
+workspace tabs, batch processing, security, measured results, and pros and cons.
+The 200-case results describe an earlier workflow revision; the current live
+benchmark and independent human ratings remain pending.
+
+Public demo: https://support-copilot-mis556-group14.streamlit.app/?embed=true
+
 ## Batch support inbox
 
 The Batch inbox tab accepts UTF-8 CSV files with `brand,message` and optional
@@ -103,8 +113,8 @@ The API-key button is in the top-right header. It opens a masked session-key
 dialog with connect, clear, and cancel actions. The drafting screen offers
 brand-specific examples; controlled draft injection is in Safety lab.
 
-The six tabs are Draft reply, Review queue, Evaluation lab, Operations & ROI,
-Safety lab, and Knowledge base. Operations shows session-scoped intent/routing
+The seven tabs are Draft reply, Batch inbox, Review queue, Evaluation lab,
+Operations & ROI, Safety lab, and Knowledge base. Operations shows session-scoped intent/routing
 analytics and a transparent what-if labor-cost calculator. Safety lab runs
 separate synthetic risk and unsafe-draft tests. Knowledge base supports source
 inspection and brand-scoped policy searches. The previous Project evidence
@@ -203,7 +213,7 @@ accuracy and escalation precision/recall/F1 are unmeasured. Do not use model
 labels as human ground truth. Reviewed natural cases and clearly labeled
 controlled risk tests should be reported separately.
 
-## Five-minute presentation
+## Report and live demonstration
 
 1. Public support problem, business benefit and why tool decisions are useful.
 2. Graph, tool choices, memory/state and bounded recovery.
@@ -214,7 +224,7 @@ controlled risk tests should be reported separately.
 The assignment explicitly requires a real application, working agentic system,
 real-world dataset/effectiveness demonstration, and pros/cons. The ablation-style
 comparison and detailed evaluation strengthen graduate-level depth; they do not
-replace your group's analysis, manual annotations or final presentation.
+replace your group's analysis, manual annotations or final report.
 
 ## File map
 
